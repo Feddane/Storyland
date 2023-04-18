@@ -2,58 +2,55 @@ package com.example.storyland;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
+
 
 public class BaseActivity extends AppCompatActivity {
-    private ConstraintLayout mConstraintLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mConstraintLayout = findViewById(R.id.constraintLayout);
+        setContentView(R.layout.activity_main);
 
-        final DisplayMetrics displayMetrics = new DisplayMetrics();
+        TextView textView1 = findViewById(R.id.textview1);
+        TextView textView2 = findViewById(R.id.textView2);
+        Button button = findViewById(R.id.myButton);
+
+        // Get the screen width
+        DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        final float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        int screenWidth = displayMetrics.widthPixels;
 
-        // Adjust margins for textView1
-        ConstraintSet constraintSet1 = new ConstraintSet();
-        constraintSet1.clone(mConstraintLayout);
-        if (dpWidth > 600) {
-            constraintSet1.setMargin(R.id.textview1, ConstraintSet.START, 64);
-            constraintSet1.setMargin(R.id.textview1, ConstraintSet.END, 64);
+        if (screenWidth > 600) {
+            // Set margins for larger devices
+            ConstraintLayout.LayoutParams params1 = (ConstraintLayout.LayoutParams) textView1.getLayoutParams();
+            params1.setMargins(32, 32, 32, 32);
+            textView1.setLayoutParams(params1);
+
+            ConstraintLayout.LayoutParams params2 = (ConstraintLayout.LayoutParams) textView2.getLayoutParams();
+            params2.setMargins(32, 32, 32, 32);
+            textView2.setLayoutParams(params2);
+
+            ConstraintLayout.LayoutParams params4 = (ConstraintLayout.LayoutParams) button.getLayoutParams();
+            params4.setMargins(32, 32, 32, 32);
+            button.setLayoutParams(params4);
         } else {
-            constraintSet1.setMargin(R.id.textview1, ConstraintSet.START, 32);
-            constraintSet1.setMargin(R.id.textview1, ConstraintSet.END, 32);
-        }
-        constraintSet1.applyTo(mConstraintLayout);
+            // Set margins for smaller devices
+            ConstraintLayout.LayoutParams params1 = (ConstraintLayout.LayoutParams) textView1.getLayoutParams();
+            params1.setMargins(16, 16, 16, 16);
+            textView1.setLayoutParams(params1);
 
-// Adjust margins for textView2
-        ConstraintSet constraintSet2 = new ConstraintSet();
-        constraintSet2.clone(mConstraintLayout);
-        if (dpWidth > 600) {
-            constraintSet2.setMargin(R.id.textView2, ConstraintSet.START, 64);
-            constraintSet2.setMargin(R.id.textView2, ConstraintSet.END, 64);
-        } else {
-            constraintSet2.setMargin(R.id.textView2, ConstraintSet.START, 32);
-            constraintSet2.setMargin(R.id.textView2, ConstraintSet.END, 32);
-        }
-        constraintSet2.applyTo(mConstraintLayout);
+            ConstraintLayout.LayoutParams params2 = (ConstraintLayout.LayoutParams) textView2.getLayoutParams();
+            params2.setMargins(16, 16, 16, 16);
+            textView2.setLayoutParams(params2);
 
-        // Adjust margins for myButton
-        ConstraintSet constraintSet3 = new ConstraintSet();
-        constraintSet3.clone(mConstraintLayout);
-        if (dpWidth > 600) {
-            constraintSet3.setMargin(R.id.myButton, ConstraintSet.START, 64);
-            constraintSet3.setMargin(R.id.myButton, ConstraintSet.END, 64);
-        } else {
-            constraintSet3.setMargin(R.id.myButton, ConstraintSet.START, 32);
-            constraintSet3.setMargin(R.id.myButton, ConstraintSet.END, 32);
+            ConstraintLayout.LayoutParams params4 = (ConstraintLayout.LayoutParams) button.getLayoutParams();
+            params4.setMargins(16, 16, 16, 16);
+            button.setLayoutParams(params4);
         }
-        constraintSet3.applyTo(mConstraintLayout);
-
     }
-
 }

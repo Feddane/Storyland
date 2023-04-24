@@ -1,14 +1,34 @@
 package com.example.storyland;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Story {
+    private int image;
+    private String title;
+//    private  List<Scene> scenes;
 
-import android.os.Bundle;
 
-public class Story extends AppCompatActivity {
+    public Story(int image, String title) {
+        this.image = image;
+        this.title = title;
+//        this.scenes = scenes;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_story);
+    public String getTitle() {
+        return title;
+    }
+
+//    public List<Scene> getScenes() {
+//        return scenes;
+//    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

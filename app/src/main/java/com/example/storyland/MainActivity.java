@@ -19,7 +19,7 @@ public class MainActivity extends BaseActivity {
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Stories.class);
+                Intent intent = new Intent(getApplicationContext(), StoriesActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,10 +1,8 @@
 package com.example.storyland;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class Stories extends BaseActivity {
+public class StoriesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

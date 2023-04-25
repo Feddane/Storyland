@@ -48,7 +48,7 @@
                 android:id="@+id/storyImg"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
-                android:src="@drawable/easterbunny"
+                android:src="@drawable/story1"
                 android:scaleType="centerCrop"/>
             
             <TextView

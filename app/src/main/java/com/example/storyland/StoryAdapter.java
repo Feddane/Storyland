@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,8 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
         holder.storyImage.setImageResource(storyImage);
         holder.author.setText(author);
 
+//        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.animation_rv));
+
     }
 
     @Override
@@ -54,6 +57,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
 
     public class StoryAdapterVh extends RecyclerView.ViewHolder {
 
+//        public View cardView;
         private TextView storyTitle;
         private ImageView storyImage;
         private TextView author;

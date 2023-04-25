@@ -39,9 +39,11 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
         Story story = storyList.get(position);
         String storyTitle = story.getTitle();
         int storyImage = story.getImage();
+        String author = story.getAuthor();
 
         holder.storyTitle.setText(storyTitle);
         holder.storyImage.setImageResource(storyImage);
+        holder.author.setText(author);
 
     }
 
@@ -54,11 +56,13 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
 
         private TextView storyTitle;
         private ImageView storyImage;
+        private TextView author;
 
         public StoryAdapterVh(@NonNull View itemView) {
             super(itemView);
             storyTitle = itemView.findViewById(R.id.storyTitle);
             storyImage= itemView.findViewById(R.id.storyImg);
+            author = itemView.findViewById(R.id.author);
         }
     }
 

@@ -27,8 +27,9 @@ public class StoriesActivity extends BaseActivity {
     }
 
     public void setData(){
-        storyList.add(new Story(R.drawable.easterbunny, "The Easter Bunny School"));
-        storyList.add(new Story(R.drawable.lilypad, "Where's My Lily Pad?"));
+        storyList.add(new Story(R.drawable.easterbunny, "The Easter Bunny School", "By Feddane Chaima"));
+        storyList.add(new Story(R.drawable.lilypad, "Where's My Lily Pad?", "By Feddane Chaima"));
+        storyList.add(new Story(R.drawable.bears, "Golidocks and the Four Bears!", "By Feddane Chaima"));
     }
 
     public void prepareRecyclerView(){

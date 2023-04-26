@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textview1"
-        android:layout_width="394dp"
-        android:layout_height="33dp"
+        android:layout_width="396dp"
+        android:layout_height="29dp"
         android:layout_marginTop="24dp"
         android:text='@string/Title'
         android:textAlignment="center"

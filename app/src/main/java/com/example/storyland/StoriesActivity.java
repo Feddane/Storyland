@@ -21,6 +21,8 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
+        //Pour revenir a l'activite precedente
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.recyclerview);
         setData();

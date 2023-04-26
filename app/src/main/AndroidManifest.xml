@@ -14,6 +14,7 @@
         tools:targetApi="31">
         <activity
             android:name=".ScenesActivity"
+            android:parentActivityName=".StoriesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -21,6 +22,7 @@
         </activity>
         <activity
             android:name=".StoriesActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

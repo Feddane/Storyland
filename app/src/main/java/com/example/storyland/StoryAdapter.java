@@ -18,11 +18,19 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
 
     public List<Story> storyList = new ArrayList<>();
     public Context context;
+    public StoryClickListener storyClickListener;
+
+    //Quand l'utilisateur selectionne ou clique sur une histoire
+    public interface  StoryClickListener{
+        void selectedStory(Story story);
+    }
 
 
-    public StoryAdapter(List<Story> story, Context context){
+
+    public StoryAdapter(List<Story> story, Context context, StoryClickListener storyClickListener){
         this.storyList = story;
         this.context = context;
+        this.storyClickListener = storyClickListener;
     }
 
 
@@ -45,6 +53,13 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapter
         holder.storyTitle.setText(storyTitle);
         holder.storyImage.setImageResource(storyImage);
         holder.author.setText(author);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storyClickListener.selectedStory(story);
+            }
+        });
 
 //        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.animation_rv));
 

@@ -1,6 +1,7 @@
 package com.example.storyland;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class StoriesActivity extends BaseActivity {
+public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryClickListener{
 
     RecyclerView recyclerView;
     StoryAdapter storyAdapter;
@@ -26,6 +27,7 @@ public class StoriesActivity extends BaseActivity {
 
     }
 
+    //On ajoute les histoires a la liste d'histoires  "List<Story> storyList"
     public void setData(){
         storyList.add(new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek"));
         storyList.add(new Story(R.drawable.story2, "Golidocks and the Four Bears!", "By Jade Maitre"));
@@ -46,8 +48,12 @@ public class StoriesActivity extends BaseActivity {
     }
 
     public void preAdapter(){
-        storyAdapter = new StoryAdapter(storyList, this);
+        storyAdapter = new StoryAdapter(storyList, this, this::selectedStory);
         recyclerView.setAdapter(storyAdapter);
     }
 
+    @Override
+    public void selectedStory(Story story) {
+        Toast.makeText(this, "COUCOUUU", Toast.LENGTH_SHORT).show();
+    }
 }

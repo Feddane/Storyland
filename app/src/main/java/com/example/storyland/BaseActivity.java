@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+//BaseActivity: est une classe java qui permet a l'application mobile de s'adapter a differents appareils et taille d'ecran "Responsive"
 public class BaseActivity extends AppCompatActivity {
 
     @Override
@@ -26,11 +26,11 @@ public class BaseActivity extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.textView2);
         Button button = findViewById(R.id.myButton);
 
-        // Find the views in the other layout files
+        // Trouver les views dans les autres layout files
         View otherView1 = getLayoutInflater().inflate(R.layout.activity_story, null);
         View otherView2 = getLayoutInflater().inflate(R.layout.activity_stories, null);
 
-        // Add the other views to the main layout
+        // Ajouter  les views au main layout
         ConstraintLayout constraintLayout = findViewById(R.id.constraintLayout);
         constraintLayout.addView(otherView1);
         constraintLayout.addView(otherView2);
@@ -41,13 +41,13 @@ public class BaseActivity extends AppCompatActivity {
         RecyclerView recyclerView = otherView2.findViewById(R.id.recyclerview);
 
 
-        // Get the screen width
+        // Obtenir la largeur de l'écran
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
 
         if (screenWidth > 600) {
-            // Set margins for larger devices
+            // Définir Margins pour les appareils plus grands
             ViewGroup.MarginLayoutParams params1 = (ViewGroup.MarginLayoutParams) textView1.getLayoutParams();
             params1.setMargins(32, 32, 32, 32);
             textView1.setLayoutParams(params1);
@@ -79,7 +79,7 @@ public class BaseActivity extends AppCompatActivity {
 
 
         } else {
-            // Set margins for smaller devices
+            // Définir Margins pour les petits appareils
             ViewGroup.MarginLayoutParams params1 = (ViewGroup.MarginLayoutParams) textView1.getLayoutParams();
             params1.setMargins(16, 16, 16, 16);
             textView1.setLayoutParams(params1);

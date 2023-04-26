@@ -1,5 +1,6 @@
 package com.example.storyland;
 
+//la classe qui definit une histoire (ses attributs, ses getters & setters)
 public class Story {
     private int image;
     private String title;

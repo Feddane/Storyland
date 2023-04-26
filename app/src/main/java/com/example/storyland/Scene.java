@@ -1,7 +1,5 @@
 package com.example.storyland;
 
-import android.widget.TextView;
-
 public class Scene {
     private int imageScene;
     private String text;

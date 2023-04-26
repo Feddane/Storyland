@@ -1,5 +1,6 @@
 package com.example.storyland;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -54,6 +55,6 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
     @Override
     public void selectedStory(Story story) {
-        Toast.makeText(this, "COUCOUUU", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ScenesActivity.class));
     }
 }

@@ -1,3 +1,5 @@
+package com.example.storyland;
+
 import android.widget.TextView;
 
 public class Scene {

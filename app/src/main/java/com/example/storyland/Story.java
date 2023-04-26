@@ -5,7 +5,7 @@ public class Story {
     private int image;
     private String title;
     private String author;
-//    private  List<Scene> scenes;
+//    private  List<com.example.storyland.Scene> scenes;
 
 
     public Story(int image, String title, String author) {
@@ -19,7 +19,7 @@ public class Story {
         return title;
     }
 
-//    public List<Scene> getScenes() {
+//    public List<com.example.storyland.Scene> getScenes() {
 //        return scenes;
 //    }
 

@@ -2,45 +2,34 @@ package com.example.storyland;
 
 import java.util.List;
 
-//la classe qui definit une histoire (ses attributs, ses getters & setters)
 public class Story {
-    private int image;
-    private String title;
-    private String author;
+    private int id;
+    private String titre;
+    private byte[] image;
     private List<Scene> scenes;
 
-
-    public Story(int image, String title, String author,  List<Scene> scenes) {
-        this.image = image;
-        this.title = title;
-        this.author = author;
-        this.scenes = scenes;
+    public int getId() {
+        return id;
     }
 
-    public String getTitle() {
-        return title;
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public String getTitre() {
+        return titre;
+    }
 
-    public int getImage() {
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public byte[] getImage() {
         return image;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setImage(int image) {
+    public void setImage(byte[] image) {
         this.image = image;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public List<Scene> getScenes() {

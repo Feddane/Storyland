@@ -4,15 +4,13 @@ import android.graphics.drawable.Drawable;
 
 public class Scene {
     private int id;
-    private Drawable image;
-    private String texte;
+    private int image;
+    private String text;
 
-    public Scene() {}
-
-    public Scene(int id, Drawable image, String texte) {
+    public Scene(int id, int image, String text) {
         this.id = id;
         this.image = image;
-        this.texte = texte;
+        this.text = text;
     }
 
     public int getId() {
@@ -23,19 +21,21 @@ public class Scene {
         this.id = id;
     }
 
-    public Drawable getImage() {
+
+
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    public String getTexte() {
-        return texte;
+    public String getText() {
+        return text;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setText(String text) {
+        this.text = text;
     }
 }

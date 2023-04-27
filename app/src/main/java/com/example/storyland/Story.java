@@ -1,12 +1,21 @@
 package com.example.storyland;
 
+import android.graphics.drawable.Drawable;
+
 import java.util.List;
 
 public class Story {
     private int id;
-    private String titre;
-    private byte[] image;
+    private String title;
+    private int image;
     private List<Scene> scenes;
+
+    public Story(int id, String title, int image, List<Scene> scenes) {
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.scenes = scenes;
+    }
 
     public int getId() {
         return id;
@@ -16,19 +25,19 @@ public class Story {
         this.id = id;
     }
 
-    public String getTitre() {
-        return titre;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public byte[] getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

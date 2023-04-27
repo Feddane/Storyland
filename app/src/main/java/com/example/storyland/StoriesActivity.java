@@ -15,7 +15,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
     RecyclerView recyclerView;
     StoryAdapter storyAdapter;
-    List<Story> storyList = new ArrayList<>();
+    static List<Story> storyList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +32,23 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
     //On ajoute les histoires a la liste d'histoires  "List<Story> storyList"
     public void setData(){
-        storyList.add(new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek"));
-        storyList.add(new Story(R.drawable.story2, "Golidocks and the Four Bears!", "By Jade Maitre"));
-        storyList.add(new Story(R.drawable.story3, "The World’s Best Ice Cream", "By Andrea Kaczmarek"));
-        storyList.add(new Story(R.drawable.story4, "The Princess Who Wasn’t", "By Templeton Moss"));
-        storyList.add(new Story(R.drawable.story5, "My Friend, Funny", "By Jade Maitre"));
-        storyList.add(new Story(R.drawable.story6, "The Neighbourhood Sofa", "By Yesim Serce"));
-        storyList.add(new Story(R.drawable.story7, "Frog’s Starry Wish", "By Sheesh Pal"));
-        storyList.add(new Story(R.drawable.story8, "Mama What’s For Lunch?", "By Sally Partdridge"));
-        storyList.add(new Story(R.drawable.story9, "The Things That Really Matter", "By Refiloe Moahloli"));
-        storyList.add(new Story(R.drawable.story10, "I Love My Mom ", "By Stephony Wail"));
+
+        //story1
+        List<Scene> story1Scenes = new ArrayList<>();
+        story1Scenes.add(new Scene(R.drawable.story1, "Il était une fois..."));
+        story1Scenes.add(new Scene(R.drawable.story2, "La fin."));
+        Story story1 = new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes);
+        storyList.add(story1);
+
+        //story2
+        List<Scene> story2Scenes = new ArrayList<>();
+        story2Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
+        story2Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
+        Story story2 = new Story(R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes);
+        storyList.add(story2);
+
+
+
     }
 
     public void prepareRecyclerView(){
@@ -57,6 +64,9 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
     @Override
     public void selectedStory(Story story) {
-        startActivity(new Intent(this, ScenesActivity.class));
+        Intent intent = new Intent(this, ScenesActivity.class);
+        intent.putExtra("selected_story_index", storyList.indexOf(story));
+        startActivity(intent);
     }
+
 }

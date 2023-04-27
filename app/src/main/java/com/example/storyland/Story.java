@@ -1,16 +1,20 @@
 package com.example.storyland;
 
+import java.util.List;
+
 //la classe qui definit une histoire (ses attributs, ses getters & setters)
 public class Story {
     private int image;
     private String title;
     private String author;
+    private List<Scene> scenes;
 
 
-    public Story(int image, String title, String author) {
+    public Story(int image, String title, String author,  List<Scene> scenes) {
         this.image = image;
         this.title = title;
         this.author = author;
+        this.scenes = scenes;
     }
 
     public String getTitle() {
@@ -37,5 +41,13 @@ public class Story {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public List<Scene> getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(List<Scene> scenes) {
+        this.scenes = scenes;
     }
 }

@@ -37,6 +37,7 @@ public class StorylandDBHelper extends SQLiteOpenHelper {
             + COLUMN_SCENE_STORY_ID + " INTEGER NOT NULL, "
             + "FOREIGN KEY (" + COLUMN_SCENE_STORY_ID + ") REFERENCES " + TABLE_STORIES + " (" + COLUMN_STORY_ID + ")"
             + ");";
+
     public StorylandDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -68,7 +69,6 @@ public class StorylandDBHelper extends SQLiteOpenHelper {
         }
 
         db.close();
-
         return id;
     }
 
@@ -95,7 +95,7 @@ public class StorylandDBHelper extends SQLiteOpenHelper {
                 String title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_STORY_TITLE));
                 int image = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_STORY_IMAGE));
 
-                List<Scene> scenes = getScenesForStory(id, db);
+                List<Scene> scenes = getScenesForStory(id,db);
 
                 Story story = new Story(id, title, image, scenes);
                 stories.add(story);
@@ -107,6 +107,8 @@ public class StorylandDBHelper extends SQLiteOpenHelper {
 
         return stories;
     }
+
+
 
     public List<Scene> getScenesForStory(long storyId, SQLiteDatabase db) {
         List<Scene> scenes = new ArrayList<>();
@@ -136,6 +138,46 @@ public class StorylandDBHelper extends SQLiteOpenHelper {
 
         return scenes;
     }
+
+
+
+
+
+
+//    public List<Scene> getScenesForStory(long storyId) {
+//        List<Scene> scenes = new ArrayList<>();
+//
+//        SQLiteDatabase db = this.getReadableDatabase();
+//
+//        String selectQuery = "SELECT * FROM " + TABLE_SCENES + " WHERE " + COLUMN_SCENE_STORY_ID + " = " + storyId;
+//
+//        Cursor cursor = db.rawQuery(selectQuery, null);
+//
+//        if (cursor.moveToFirst()) {
+//            do {
+//                int idIndex = cursor.getColumnIndex(COLUMN_SCENE_ID);
+//                int imageIndex = cursor.getColumnIndex(COLUMN_SCENE_IMAGE);
+//                int textIndex = cursor.getColumnIndex(COLUMN_SCENE_TEXT);
+//
+//                int id = cursor.getInt(idIndex);
+//                int image = cursor.getInt(imageIndex);
+//                String text = cursor.getString(textIndex);
+//
+//                if (idIndex != -1  && imageIndex != -1 && textIndex != -1) {
+//                    Scene scene = new Scene(id, image, text);
+//                    scenes.add(scene);
+//                }
+//            } while (cursor.moveToNext());
+//        }
+//
+//        cursor.close();
+//        db.close();
+//
+//        return scenes;
+//    }
+
+
+
 
 
 }

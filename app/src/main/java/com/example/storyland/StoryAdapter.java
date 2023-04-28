@@ -20,13 +20,15 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
 
     private List<Story> mStories;
     private OnItemClickListener mListener;
+    private Context mContext;
 
-    public interface OnItemClickListener {
-        void onItemClick(int position);
+    public StoryAdapter(List<Story> stories, Context context) {
+        mStories = stories;
+        mContext = context;
     }
 
-    public StoryAdapter(List<Story> stories) {
-        mStories = stories;
+    public interface OnItemClickListener {
+        void onItemClick(Story story);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -38,6 +40,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
     public StoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_story, parent, false);
         StoryViewHolder viewHolder = new StoryViewHolder(v, mListener);
+        v.setTag(viewHolder);
         return viewHolder;
     }
 
@@ -54,11 +57,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
         return mStories.size();
     }
 
-    public int getStoryId(int position) {
-        return mStories.get(position).getId();
-    }
-
-    public static class StoryViewHolder extends RecyclerView.ViewHolder {
+    public class StoryViewHolder extends RecyclerView.ViewHolder {
         public TextView mTitleTextView;
         public ImageView mImageView;
 
@@ -73,13 +72,12 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
                     if (listener != null) {
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
+                            Story clickedStory = mStories.get(position);
+                            listener.onItemClick(clickedStory);
                         }
                     }
                 }
             });
         }
     }
-
-
 }

@@ -39,7 +39,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.OnItem
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new StoryAdapter(stories);
+        mAdapter = new StoryAdapter(stories, this);
         mAdapter.setOnItemClickListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -77,12 +77,22 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.OnItem
 
     }
 
+//    @Override
+//    public void onItemClick(long position) {
+//        Intent intent = new Intent(this, ScenesActivity.class);
+//        intent.putExtra("story_id", mAdapter.getStoryId(position));
+//        startActivity(intent);
+//    }
+
     @Override
-    public void onItemClick(int position) {
+    public void onItemClick(Story story) {
+        // Start ScenesActivity with the story ID
         Intent intent = new Intent(this, ScenesActivity.class);
-        intent.putExtra("story_id", mAdapter.getStoryId(position));
+        intent.putExtra("story_id", story.getId());
         startActivity(intent);
     }
+
+
 
 
 }

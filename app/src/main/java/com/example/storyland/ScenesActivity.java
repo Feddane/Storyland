@@ -25,6 +25,7 @@ public class ScenesActivity extends BaseActivity {
     private MediaPlayer mediaPlayer;
     private SeekBar seek_bar;
     private Handler handler;
+    private TextView player_position, player_duration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,9 @@ public class ScenesActivity extends BaseActivity {
         mediaPlayer = MediaPlayer.create(this, selectedStory.getAudioResourceId());
         seek_bar = findViewById(R.id.seek_bar);
         handler = new Handler();
+        player_position = findViewById(R.id.player_position);
+        player_duration = findViewById(R.id.player_duration);
+
 
         bt_play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,9 +83,14 @@ public class ScenesActivity extends BaseActivity {
                 mediaPlayer.start();
                 bt_play.setVisibility(View.GONE);
                 bt_pause.setVisibility(View.VISIBLE);
-                seekUpdation();
+
+                int duration = mediaPlayer.getDuration();
+                seek_bar.setMax(duration);
+
+                handler.postDelayed(seekBarRunnable, 0);
             }
         });
+
 
         bt_pause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,8 +112,12 @@ public class ScenesActivity extends BaseActivity {
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
 
+
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                mediaPlayer.seekTo(seekBar.getProgress());
+            }
+
         });
 
         bt_rew.setOnClickListener(new View.OnClickListener() {
@@ -142,6 +155,33 @@ public class ScenesActivity extends BaseActivity {
             }
         }, 100);
     }
+
+    private Runnable seekBarRunnable = new Runnable() {
+        @Override
+        public void run() {
+            int currentPosition = mediaPlayer.getCurrentPosition();
+            seek_bar.setProgress(currentPosition);
+
+            // update the time display
+            String currentPositionStr = createTimeLabel(currentPosition);
+            player_position.setText(currentPositionStr);
+
+            handler.postDelayed(this, 1000);
+        }
+    };
+
+    private String createTimeLabel(int time) {
+        String timeLabel = "";
+        int min = time / 1000 / 60;
+        int sec = time / 1000 % 60;
+
+        timeLabel = min + ":";
+        if (sec < 10) timeLabel += "0";
+        timeLabel += sec;
+
+        return timeLabel;
+    }
+
 }
 
 

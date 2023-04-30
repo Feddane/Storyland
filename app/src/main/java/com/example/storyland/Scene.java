@@ -1,21 +1,34 @@
 package com.example.storyland;
 
+import android.graphics.drawable.Drawable;
+
 public class Scene {
-    private int imageScene;
+    private int id;
+    private int image;
     private String text;
 
-    public Scene(int imageScene, String text) {
-        this.imageScene = imageScene;
+    public Scene(int id, int image, String text) {
+        this.id = id;
+        this.image = image;
         this.text = text;
     }
 
-
-    public int getImageScene() {
-        return imageScene;
+    public int getId() {
+        return id;
     }
 
-    public void setImageScene(int imageScene) {
-        this.imageScene = imageScene;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getText() {

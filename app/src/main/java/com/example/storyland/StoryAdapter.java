@@ -1,6 +1,8 @@
 package com.example.storyland;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,75 +16,68 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryAdapterVh> {
+public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
 
-    public List<Story> storyList = new ArrayList<>();
-    public Context context;
-    public StoryClickListener storyClickListener;
+    private List<Story> mStories;
+    private OnItemClickListener mListener;
+    private Context mContext;
 
-    //Quand l'utilisateur selectionne ou clique sur une histoire
-    public interface  StoryClickListener{
-        void selectedStory(Story story);
+    public StoryAdapter(List<Story> stories, Context context) {
+        mStories = stories;
+        mContext = context;
     }
 
-
-
-    public StoryAdapter(List<Story> story, Context context, StoryClickListener storyClickListener){
-        this.storyList = story;
-        this.context = context;
-        this.storyClickListener = storyClickListener;
+    public interface OnItemClickListener {
+        void onItemClick(Story story);
     }
 
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     @NonNull
     @Override
-    public StoryAdapterVh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_story, parent, false);
-        return new StoryAdapterVh(view);
+    public StoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_story, parent, false);
+        StoryViewHolder viewHolder = new StoryViewHolder(v, mListener);
+        v.setTag(viewHolder);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull StoryAdapterVh holder, int position) {
+    public void onBindViewHolder(@NonNull StoryViewHolder holder, int position) {
+        Story currentStory = mStories.get(position);
 
-        Story story = storyList.get(position);
-        String storyTitle = story.getTitle();
-        int storyImage = story.getImage();
-        String author = story.getAuthor();
-
-        holder.storyTitle.setText(storyTitle);
-        holder.storyImage.setImageResource(storyImage);
-        holder.author.setText(author);
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                storyClickListener.selectedStory(story);
-            }
-        });
-
-//        holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.animation_rv));
-
+        holder.mTitleTextView.setText(currentStory.getTitle());
+        holder.mImageView.setImageResource(currentStory.getImage());
     }
 
     @Override
     public int getItemCount() {
-        return storyList.size();
+        return mStories.size();
     }
 
-    public class StoryAdapterVh extends RecyclerView.ViewHolder {
+    public class StoryViewHolder extends RecyclerView.ViewHolder {
+        public TextView mTitleTextView;
+        public ImageView mImageView;
 
-//        public View cardView;
-        private TextView storyTitle;
-        private ImageView storyImage;
-        private TextView author;
-
-        public StoryAdapterVh(@NonNull View itemView) {
+        public StoryViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
-            storyTitle = itemView.findViewById(R.id.storyTitle);
-            storyImage= itemView.findViewById(R.id.storyImg);
-            author = itemView.findViewById(R.id.author);
+            mTitleTextView = itemView.findViewById(R.id.storyTitle);
+            mImageView = itemView.findViewById(R.id.storyImg);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            Story clickedStory = mStories.get(position);
+                            listener.onItemClick(clickedStory);
+                        }
+                    }
+                }
+            });
         }
     }
-
 }

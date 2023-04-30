@@ -1,46 +1,44 @@
 package com.example.storyland;
 
+import android.graphics.drawable.Drawable;
+
 import java.util.List;
 
-//la classe qui definit une histoire (ses attributs, ses getters & setters)
 public class Story {
-    private int image;
+    private int id;
     private String title;
-    private String author;
+    private int image;
     private List<Scene> scenes;
 
-
-    public Story(int image, String title, String author,  List<Scene> scenes) {
-        this.image = image;
+    public Story(int id, String title, int image, List<Scene> scenes) {
+        this.id = id;
         this.title = title;
-        this.author = author;
+        this.image = image;
         this.scenes = scenes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public int getImage() {
         return image;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
     public void setImage(int image) {
         this.image = image;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public List<Scene> getScenes() {

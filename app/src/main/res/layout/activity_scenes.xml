@@ -15,5 +15,19 @@
         android:foregroundGravity="center"
         android:overScrollMode="never" />
 
+    <TextView
+        android:id="@+id/textview_scenes_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/15"
+        android:textSize="16sp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
 
 </RelativeLayout>

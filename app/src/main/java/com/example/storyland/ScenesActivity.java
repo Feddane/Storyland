@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class ScenesActivity extends BaseActivity {
     private ViewPager viewPager;
     private List<Scene> sceneList;
     private int selectedStoryIndex;
+    private TextView scenesCountTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +33,25 @@ public class ScenesActivity extends BaseActivity {
         viewPager = findViewById(R.id.viewpager);
         ScenePagerAdapter adapter = new ScenePagerAdapter(sceneList, this);
         viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                int sceneCount = sceneList.size();
+                scenesCountTextView.setText((position + 1) + "/" + sceneCount);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        // initialisation du TextView pour afficher le nombre total de scènes
+        scenesCountTextView = findViewById(R.id.textview_scenes_count);
+        int sceneCount = sceneList.size();
+        scenesCountTextView.setText("1/" + sceneCount);
     }
 }

@@ -2,6 +2,8 @@ package com.example.storyland;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 
@@ -28,6 +30,26 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         setData();
         prepareRecyclerView();
 
+    }
+
+    //Des qu'on clique sur le coeur(favourite list) situé sur ActionBar, on passe à FavouriteScenesActivity
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_favourites) {
+            Intent intent = new Intent(this, FavoriteStoriesActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     //On ajoute les histoires a la liste d'histoires  "List<Story> storyList"

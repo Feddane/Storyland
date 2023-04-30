@@ -61,15 +61,27 @@
                 android:textColor="#282828"
                 android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginStart="16dp"
-                android:text="by Feddane Chaima"
-                android:textColor="@color/black"
-                android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:text="by Feddane Chaima"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/FavBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/ic_favourite" />
+
+
 
         </LinearLayout>
 

@@ -4,6 +4,7 @@ import java.util.List;
 
 //la classe qui definit une histoire (ses attributs, ses getters & setters)
 public class Story {
+    private int id;
     private int image;
     private String title;
     private String author;
@@ -11,7 +12,8 @@ public class Story {
     private int audioResourceId;
 
 
-    public Story(int image, String title, String author,  List<Scene> scenes,  int audioResourceId) {
+    public Story(int id , int image, String title, String author,  List<Scene> scenes,  int audioResourceId) {
+        this.id = id;
         this.image = image;
         this.title = title;
         this.author = author;
@@ -59,5 +61,13 @@ public class Story {
 
     public void setAudioResourceId(int audioResourceId) {
         this.audioResourceId = audioResourceId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

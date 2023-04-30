@@ -32,7 +32,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
     }
 
-    //Des qu'on clique sur le coeur(favourite list) situé sur ActionBar, on passe à FavouriteScenesActivity
+    //Des qu'on clique sur le coeur(favourite list) situé sur ActionBar, on passe à FavouriteStoriesActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -78,7 +78,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         story1Scenes.add(new Scene(R.drawable.scene17story1, scenes_story1[16]));
         story1Scenes.add(new Scene(R.drawable.scene18story1, scenes_story1[17]));
         story1Scenes.add(new Scene(R.drawable.scene19story1, scenes_story1[18]));
-        Story story1 = new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes, story1AudioResourceId);
+        Story story1 = new Story(1, R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes, story1AudioResourceId);
         storyList.add(story1);
 
         //story2
@@ -86,7 +86,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         int story2AudioResourceId = R.raw.story2;
         story2Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
         story2Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
-        Story story2 = new Story(R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes, story2AudioResourceId);
+        Story story2 = new Story(2, R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes, story2AudioResourceId);
         storyList.add(story2);
 
 

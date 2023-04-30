@@ -3,4 +3,26 @@
     <string name="Title">WELCOME TO STORYLAND !</string>
     <string name="Subtitle">Are you ready to embark on a magical journey and discover endless stories in Storyland?</string>
     <string name="enter">Enter!</string>
+
+    <string-array name="scenes_story1">
+        <item>All Easter Bunnies go to the Easter Bunny School, to learn the three most important things...</item>
+        <item>One, Painting Easter eggs: nice and bright.</item>
+        <item>Two, Hiding Easter eggs: not too hard, and not too easy.</item>
+        <item>Three, and very important: reading maps.</item>
+        <item>Some children live in faraway places, some in hard-to-find places...</item>
+        <item>Our Easter Bunny is very new, and he must got a BIG BIG PARK... to hide eggs for the children playing in the park</item>
+        <item>"This map of this park isn\'t so easy, Water?" He asks a frog sitting by the pool of water, \"Is the BIG BIG sandpit nearby?\". Frog lauphs. "Just follow the path and ask butterflies"</item>
+        <item>Easter Bunny hops off, following the path. "Oh! The butterflies in the flower garden!"</item>
+        <item>Easter Bunny stops, and the butterflies fly around his head. "Is the BIG BIG sandpit nearby" he asks.</item>
+        <item>The butterflies all laugh. "Follow the path and ask the BIG fish in the water." And they flutter back into their flowers. Easter Bunny hops off, following the path.</item>
+        <item>"Oh a BIG fish!, Is the BIG sandpit nearby?" he asks.   The big fish in the water laughs. "Follow the path to the climbing playgrund. It isn\'t far".</item>
+        <item>Easter bunny stops at the climbing playground and some children shout from high up. "Hello Easter Bunny, can we help you?"</item>
+        <item>Easter Bunny looks up at the climbing frame. "Is the BIG BIG sandpit nearby", he asks.</item>
+        <item>"Follow the path, it isn\'t far. And hurry up! we are waiting for you to hide the Easter eggs. You\'re late!". Easter Bunny hops off, following the path.</item>
+        <item>He looks up and he sees the BIG BIG sandpit at last, and the park keeper looking down at him.</item>
+        <item>"You\'re late. The children will be here soon, so you\'d better be quick hiding those eggs"</item>
+        <item>Easter Bunny starts to hide the bright coloured Easter eggs. The park keeper looks down at the map that Easter Bunny show him.</item>
+        <item>"But you are holding it upside down!" the Park keeper laughs, very loud.</item>
+        <item>"Oooops!" Easter Bunny looks at the map. "I\'m a new Easter Bunny, but i\'m learning fast! i\'ll be better next Easter!</item>
+    </string-array>
 </resources>

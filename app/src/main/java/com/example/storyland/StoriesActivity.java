@@ -34,9 +34,27 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
     public void setData(){
 
         //story1
+        String[] scenes_story1 = getResources().getStringArray(R.array.scenes_story1);
         List<Scene> story1Scenes = new ArrayList<>();
-        story1Scenes.add(new Scene(R.drawable.story1, "Il était une fois..."));
-        story1Scenes.add(new Scene(R.drawable.story2, "La fin."));
+        story1Scenes.add(new Scene(R.drawable.scene1story1, scenes_story1[0]));
+        story1Scenes.add(new Scene(R.drawable.scene2story1, scenes_story1[1]));
+        story1Scenes.add(new Scene(R.drawable.scene3story1, scenes_story1[2]));
+        story1Scenes.add(new Scene(R.drawable.scene4story1, scenes_story1[3]));
+        story1Scenes.add(new Scene(R.drawable.scene5story1, scenes_story1[4]));
+        story1Scenes.add(new Scene(R.drawable.scene6story1, scenes_story1[5]));
+        story1Scenes.add(new Scene(R.drawable.scene7story1, scenes_story1[6]));
+        story1Scenes.add(new Scene(R.drawable.scene8story1, scenes_story1[7]));
+        story1Scenes.add(new Scene(R.drawable.scene9story1, scenes_story1[8]));
+        story1Scenes.add(new Scene(R.drawable.scene10story1, scenes_story1[9]));
+        story1Scenes.add(new Scene(R.drawable.scene11story1, scenes_story1[10]));
+        story1Scenes.add(new Scene(R.drawable.scene12story1, scenes_story1[11]));
+        story1Scenes.add(new Scene(R.drawable.scene13story1, scenes_story1[12]));
+        story1Scenes.add(new Scene(R.drawable.scene14story1, scenes_story1[13]));
+        story1Scenes.add(new Scene(R.drawable.scene15story1, scenes_story1[14]));
+        story1Scenes.add(new Scene(R.drawable.scene16story1, scenes_story1[15]));
+        story1Scenes.add(new Scene(R.drawable.scene17story1, scenes_story1[16]));
+        story1Scenes.add(new Scene(R.drawable.scene18story1, scenes_story1[17]));
+        story1Scenes.add(new Scene(R.drawable.scene19story1, scenes_story1[18]));
         Story story1 = new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes);
         storyList.add(story1);
 

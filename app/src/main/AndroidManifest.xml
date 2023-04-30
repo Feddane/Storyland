@@ -13,17 +13,24 @@
         android:theme="@style/Theme.Storyland"
         tools:targetApi="31">
         <activity
-            android:name=".ScenesActivity"
-            android:parentActivityName=".StoriesActivity"
+            android:name=".FavoriteStoriesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+            android:name=".ScenesActivity"
+            android:exported="false"
+            android:parentActivityName=".StoriesActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".StoriesActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

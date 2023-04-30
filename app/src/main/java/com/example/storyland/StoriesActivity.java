@@ -61,7 +61,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
         //story2
         List<Scene> story2Scenes = new ArrayList<>();
-        int story2AudioResourceId = R.raw.story1;
+        int story2AudioResourceId = R.raw.story2;
         story2Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
         story2Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
         Story story2 = new Story(R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes, story2AudioResourceId);

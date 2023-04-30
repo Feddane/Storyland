@@ -46,19 +46,7 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-<!--    <Button-->
-<!--        android:id="@+id/playy"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginBottom="150dp"-->
-<!--        android:paddingLeft="30dp"-->
-<!--        android:paddingRight="30dp"-->
-<!--        android:text="click here"-->
-<!--        android:textSize="16sp"-->
-<!--        android:textStyle="bold" />-->
+
 
     <LinearLayout
         android:layout_width="match_parent"

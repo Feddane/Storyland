@@ -66,6 +66,7 @@ public class ScenesActivity extends BaseActivity {
         int sceneCount = sceneList.size();
         scenesCountTextView.setText("1/" + sceneCount);
 
+        //Cette partie est consacre pour l'audio: Seekbar, button play, pause...etc avec leurs initialisation et leurs methodes
         bt_play = findViewById(R.id.bt_play);
         bt_pause = findViewById(R.id.bt_pause);
         bt_ff = findViewById(R.id.bt_ff);
@@ -162,13 +163,17 @@ public class ScenesActivity extends BaseActivity {
             int currentPosition = mediaPlayer.getCurrentPosition();
             seek_bar.setProgress(currentPosition);
 
-            // update the time display
             String currentPositionStr = createTimeLabel(currentPosition);
             player_position.setText(currentPositionStr);
+
+
+            String durationStr = createTimeLabel(mediaPlayer.getDuration());
+            player_duration.setText(durationStr);
 
             handler.postDelayed(this, 1000);
         }
     };
+
 
     private String createTimeLabel(int time) {
         String timeLabel = "";

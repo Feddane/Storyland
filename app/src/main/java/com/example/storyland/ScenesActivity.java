@@ -21,6 +21,11 @@ public class ScenesActivity extends BaseActivity {
     private int selectedStoryIndex;
     private TextView scenesCountTextView;
 
+    private ImageView bt_play, bt_pause, bt_ff, bt_rew;
+    private MediaPlayer mediaPlayer;
+    private SeekBar seek_bar;
+    private Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,14 +65,83 @@ public class ScenesActivity extends BaseActivity {
         int sceneCount = sceneList.size();
         scenesCountTextView.setText("1/" + sceneCount);
 
-        Button playButton = findViewById(R.id.playy);
-        playButton.setOnClickListener(new View.OnClickListener() {
+        bt_play = findViewById(R.id.bt_play);
+        bt_pause = findViewById(R.id.bt_pause);
+        bt_ff = findViewById(R.id.bt_ff);
+        bt_rew = findViewById(R.id.bt_rew);
+        mediaPlayer = MediaPlayer.create(this, selectedStory.getAudioResourceId());
+        seek_bar = findViewById(R.id.seek_bar);
+        handler = new Handler();
+
+        bt_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int audioResourceId = selectedStory.getAudioResourceId();
-                MediaPlayer mediaPlayer = MediaPlayer.create(ScenesActivity.this, audioResourceId);
                 mediaPlayer.start();
+                bt_play.setVisibility(View.GONE);
+                bt_pause.setVisibility(View.VISIBLE);
+                seekUpdation();
+            }
+        });
+
+        bt_pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.pause();
+                bt_pause.setVisibility(View.GONE);
+                bt_play.setVisibility(View.VISIBLE);
+            }
+        });
+
+        seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser) {
+                    mediaPlayer.seekTo(progress);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
+        bt_rew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int currentPosition = mediaPlayer.getCurrentPosition();
+                if (currentPosition - 10000 > 0) {
+                    mediaPlayer.seekTo(currentPosition - 10000);
+                } else {
+                    mediaPlayer.seekTo(0);
+                }
+            }
+        });
+
+        bt_ff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int currentPosition = mediaPlayer.getCurrentPosition();
+                int duration = mediaPlayer.getDuration();
+                if (currentPosition + 10000 < duration) {
+                    mediaPlayer.seekTo(currentPosition + 10000);
+                } else {
+                    mediaPlayer.seekTo(duration);
+                }
             }
         });
     }
+
+    public void seekUpdation() {
+        seek_bar.setProgress(mediaPlayer.getCurrentPosition());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                seekUpdation();
+            }
+        }, 100);
+    }
 }
+
+

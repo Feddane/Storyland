@@ -8,13 +8,15 @@ public class Story {
     private String title;
     private String author;
     private List<Scene> scenes;
+    private int audioResourceId;
 
 
-    public Story(int image, String title, String author,  List<Scene> scenes) {
+    public Story(int image, String title, String author,  List<Scene> scenes,  int audioResourceId) {
         this.image = image;
         this.title = title;
         this.author = author;
         this.scenes = scenes;
+        this.audioResourceId = audioResourceId;
     }
 
     public String getTitle() {
@@ -49,5 +51,13 @@ public class Story {
 
     public void setScenes(List<Scene> scenes) {
         this.scenes = scenes;
+    }
+
+    public int getAudioResourceId() {
+        return audioResourceId;
+    }
+
+    public void setAudioResourceId(int audioResourceId) {
+        this.audioResourceId = audioResourceId;
     }
 }

@@ -3,7 +3,13 @@ package com.example.storyland;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.List;
@@ -53,5 +59,15 @@ public class ScenesActivity extends BaseActivity {
         scenesCountTextView = findViewById(R.id.textview_scenes_count);
         int sceneCount = sceneList.size();
         scenesCountTextView.setText("1/" + sceneCount);
+
+        Button playButton = findViewById(R.id.playy);
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int audioResourceId = selectedStory.getAudioResourceId();
+                MediaPlayer mediaPlayer = MediaPlayer.create(ScenesActivity.this, audioResourceId);
+                mediaPlayer.start();
+            }
+        });
     }
 }

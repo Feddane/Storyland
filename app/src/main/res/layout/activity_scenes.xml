@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".ScenesActivity">
 
     <androidx.viewpager.widget.ViewPager
@@ -13,21 +14,127 @@
         android:layout_centerInParent="true"
         android:clipToPadding="false"
         android:foregroundGravity="center"
-        android:overScrollMode="never" />
+        android:overScrollMode="never">
+
+    </androidx.viewpager.widget.ViewPager>
 
     <TextView
         android:id="@+id/textview_scenes_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1/15"
-        android:textSize="16sp"
+        android:layout_above="@+id/textview"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="78dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
+        android:text="1/15"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="300dp"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="200dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="You can listen to the story here !"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/playy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="150dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="click here"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="120dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:padding="12dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/player_position"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="00:00"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <SeekBar-->
+<!--            android:id="@+id/seek_bar"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/player_duration"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="00:00"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:padding="12dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/bt_rew"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/ic_fast_rewind" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/bt_play"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/ic_play" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/bt_pause"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:src="@drawable/ic_pause" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/bt_ff"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/ic_fast_forward" />-->
+
+
+<!--    </LinearLayout>-->
+
+
 
 
 </RelativeLayout>

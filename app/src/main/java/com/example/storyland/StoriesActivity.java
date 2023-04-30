@@ -36,6 +36,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         //story1
         String[] scenes_story1 = getResources().getStringArray(R.array.scenes_story1);
         List<Scene> story1Scenes = new ArrayList<>();
+        int story1AudioResourceId = R.raw.story1;
         story1Scenes.add(new Scene(R.drawable.scene1story1, scenes_story1[0]));
         story1Scenes.add(new Scene(R.drawable.scene2story1, scenes_story1[1]));
         story1Scenes.add(new Scene(R.drawable.scene3story1, scenes_story1[2]));
@@ -55,14 +56,15 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         story1Scenes.add(new Scene(R.drawable.scene17story1, scenes_story1[16]));
         story1Scenes.add(new Scene(R.drawable.scene18story1, scenes_story1[17]));
         story1Scenes.add(new Scene(R.drawable.scene19story1, scenes_story1[18]));
-        Story story1 = new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes);
+        Story story1 = new Story(R.drawable.story1, "The Easter Bunny School", "By Andrea Kaczmarek", story1Scenes, story1AudioResourceId);
         storyList.add(story1);
 
         //story2
         List<Scene> story2Scenes = new ArrayList<>();
+        int story2AudioResourceId = R.raw.story1;
         story2Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
         story2Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
-        Story story2 = new Story(R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes);
+        Story story2 = new Story(R.drawable.story2, "The Bears in the kitchen", "By Andrea Kaczmarek", story2Scenes, story2AudioResourceId);
         storyList.add(story2);
 
 

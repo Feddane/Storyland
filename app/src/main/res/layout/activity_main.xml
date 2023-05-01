@@ -13,7 +13,7 @@
         android:layout_width="396dp"
         android:layout_height="44dp"
         android:layout_marginTop="76dp"
-        android:text='@string/Title'
+        android:text="WELCOME TO STORYLAND !"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="444dp"
-        android:text="@string/enter"
+        android:text="Enter!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.544"

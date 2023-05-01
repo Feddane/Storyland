@@ -1,5 +1,6 @@
 package com.example.storyland;
 
+//la classe qui definit une scene (ses attributs, ses getters & setters)
 public class Scene {
     private int imageScene;
     private String text;

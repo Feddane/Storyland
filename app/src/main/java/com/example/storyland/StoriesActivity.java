@@ -111,4 +111,11 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         startActivity(intent);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Informer Adapter pour mettre à jour l'état du bouton favori
+        storyAdapter.notifyDataSetChanged();
+    }
+
 }

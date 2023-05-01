@@ -16,7 +16,6 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.example.storyland.StoriesActivity.storyList;
 
 public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
 
@@ -63,11 +62,10 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             }
         });
 
-        // Check if the story is already in favorites
-        boolean isFavorite = FavoriteStoriesActivity.isFavorite(holder.itemView.getContext(), story);
+        // Vérifie si l'histoire est déjà dans les favoris
+        boolean isFavorite = story.isFavorite();
 
-        // Show the appropriate button based on whether the story is in favorites or not
-        if (isFavorite) {
+        if(isFavorite) {
             holder.addButton.setVisibility(View.GONE);
             holder.removeButton.setVisibility(View.VISIBLE);
         } else {
@@ -75,46 +73,51 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             holder.removeButton.setVisibility(View.GONE);
         }
 
-        // Set OnClickListener for the "Add to Favorites" button
+        // Définir OnClickListener pour le bouton "Ajouter aux favoris"
         holder.addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Add story to favorites
+                // Ajouter l'histoire aux favoris
                 Context context = holder.addButton.getContext();
                 FavoriteStoriesActivity.addToFavorites(context, story);
 
+                // Mettre a jour "isFavorite" pour l'histoire
+                story.setFavorite(true);
 
-                // Show the "Remove from Favorites" button and hide the "Add to Favorites" button
+                // Afficher le bouton "Supprimer des favoris" et masquer le bouton "Ajouter aux favoris"
                 holder.addButton.setVisibility(View.GONE);
                 holder.removeButton.setVisibility(View.VISIBLE);
 
-                // Show a Toast message
+                // Afficher un message Toast pour informer l'utilisateur que l'histoire a bien ete ajouter
                 Toast.makeText(holder.itemView.getContext(), "Story added to favorites", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // Set OnClickListener for the "Remove from Favorites" button
+        // Définir OnClickListener pour le bouton "Supprimer des favoris"
         holder.removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Remove story from favorites
+                // Supprimer l'histoire des favoris
                 FavoriteStoriesActivity.removeFromFavorites(story);
 
+                // Mettre à jour le drapeau isFavorite pour l'histoire
+                story.setFavorite(false);
 
-                // Show the "Add to Favorites" button and hide the "Remove from Favorites" button
+                // Afficher le bouton "Ajouter aux favoris" et masquer le bouton "Supprimer des favoris"
                 holder.addButton.setVisibility(View.VISIBLE);
                 holder.removeButton.setVisibility(View.GONE);
 
-                // Show a Toast message
+                // Afficher un message Toast pour informer l'utilisateur que l'histoire a bien ete supprimer
                 Toast.makeText(holder.itemView.getContext(), "Story removed from favorites", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // Hide the buttons if the adapter is used in the FavouriteStoriesActivity
+        // Cacher les boutons si Adapter est utilisé dans la FavoriteStoriesActivity = Supprimer les boutons dans FavoriteStoriesActivity
         if (context instanceof FavoriteStoriesActivity) {
             holder.addButton.setVisibility(View.GONE);
             holder.removeButton.setVisibility(View.GONE);
         }
+
     }
 
 

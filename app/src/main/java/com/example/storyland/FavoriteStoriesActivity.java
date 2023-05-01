@@ -50,28 +50,30 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
 
     @Override
     public void selectedStory(Story story) {
-        // Do nothing
     }
 
+    //Ajouter l'histoire dans favoris
     public static void addToFavorites(Context context, Story story) {
         if (favoriteStoriesList.contains(story)) {
             Toast.makeText(context, "Story already in favorites list", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        story.setFavorite(true);
         favoriteStoriesList.add(story);
         if (storyAdapter != null) {
             storyAdapter.notifyDataSetChanged();
         }
     }
 
-
-
+    //Supprimer l'histoire des favoris
     public static void removeFromFavorites(Story story) {
+        story.setFavorite(false);
         favoriteStoriesList.remove(story);
         storyAdapter.notifyDataSetChanged();
     }
 
+    //Vérifier si une histoire est enregistrée dans les favoris de l'utilisateur.
     public static boolean isFavorite(Context context, Story story) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         Set<String> favoritesSet = preferences.getStringSet(FAVORITES_SET_KEY, new HashSet<String>());

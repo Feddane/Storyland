@@ -16,6 +16,7 @@ public class MainActivity extends BaseActivity {
 
         enterButton = findViewById(R.id.myButton);
 
+        //Quand on clique sur le bouton "Entrer!", l'activite "StoriesActivity" s'ouvre
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

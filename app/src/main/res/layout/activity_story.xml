@@ -79,7 +79,7 @@
                 android:layout_gravity="bottom|end"
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="18dp"
-                android:background="@drawable/ic_empty_fav" />
+                android:background="@drawable/ic_baseline_favorite_border_24" />
 
             <Button
                 android:id="@+id/remove_button"
@@ -89,7 +89,7 @@
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="18dp"
                 android:visibility="gone"
-                android:background="@drawable/ic_favourite" />
+                android:background="@drawable/ic_baseline_favorite_24" />
 
 
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".StoriesActivity"
     android:padding="10dp"
-    android:background="@drawable/bachkground2">
+    android:background="@drawable/background2">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"

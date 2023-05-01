@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bachkground2"
+    android:background="@drawable/background2"
     tools:context=".ScenesActivity">
 
     <androidx.viewpager.widget.ViewPager
@@ -29,6 +29,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="1/15"
+        android:background="#efd199"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -43,7 +44,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="🎧You can listen to the story here !🎧"
-        android:textSize="16sp"
+        android:textSize="17sp"
         android:textStyle="bold" />
 
 

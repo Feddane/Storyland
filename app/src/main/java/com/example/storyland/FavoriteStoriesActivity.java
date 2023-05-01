@@ -7,19 +7,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
-import android.widget.Button;
+
+import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static com.example.storyland.StoriesActivity.storyList;
 
 public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapter.StoryClickListener {
 
@@ -38,6 +37,14 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
 
         recyclerView = findViewById(R.id.recyclerview);
         prepareRecyclerView();
+
+        //Afficher le message "Your favorite stories list is empty" si la liste est vide
+        TextView emptyFavoritesText = findViewById(R.id.emptyFavoritesText);
+        if (favoriteStoriesList.isEmpty()) {
+            emptyFavoritesText.setVisibility(View.VISIBLE);
+        } else {
+            emptyFavoritesText.setVisibility(View.GONE);
+        }
 
     }
 
@@ -67,10 +74,13 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
     }
 
     //Supprimer l'histoire des favoris
-    public static void removeFromFavorites(Story story) {
+    public static void removeFromFavorites( Story story) {
         story.setFavorite(false);
         favoriteStoriesList.remove(story);
-        storyAdapter.notifyDataSetChanged();
+        if (storyAdapter != null) {
+            storyAdapter.notifyDataSetChanged();
+        }
+
     }
 
     //Vérifier si une histoire est enregistrée dans les favoris de l'utilisateur.

@@ -10,6 +10,7 @@ public class Story {
     private String author;
     private List<Scene> scenes;
     private int audioResourceId;
+//    private boolean isFavorite;
 
 
     public Story(int id , int image, String title, String author,  List<Scene> scenes,  int audioResourceId) {
@@ -19,6 +20,7 @@ public class Story {
         this.author = author;
         this.scenes = scenes;
         this.audioResourceId = audioResourceId;
+//        this.isFavorite = false; // initialize to false by default
     }
 
     public String getTitle() {
@@ -70,4 +72,12 @@ public class Story {
     public void setId(int id) {
         this.id = id;
     }
+
+//    public boolean isFavorite() {
+//        return isFavorite;
+//    }
+//
+//    public void setFavorite(boolean favorite) {
+//        isFavorite = favorite;
+//    }
 }

@@ -83,6 +83,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
                 Context context = holder.addButton.getContext();
                 FavoriteStoriesActivity.addToFavorites(context, story);
 
+
                 // Show the "Remove from Favorites" button and hide the "Add to Favorites" button
                 holder.addButton.setVisibility(View.GONE);
                 holder.removeButton.setVisibility(View.VISIBLE);
@@ -97,8 +98,8 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             @Override
             public void onClick(View v) {
                 // Remove story from favorites
-                Context context = holder.itemView.getContext();
                 FavoriteStoriesActivity.removeFromFavorites(story);
+
 
                 // Show the "Add to Favorites" button and hide the "Remove from Favorites" button
                 holder.addButton.setVisibility(View.VISIBLE);

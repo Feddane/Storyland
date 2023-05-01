@@ -37,7 +37,6 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.recyclerview);
-//        favoriteStoriesList = loadFavorites();
         prepareRecyclerView();
 
     }
@@ -81,43 +80,5 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
         return favoritesSet.contains(storyId);
     }
 
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//
-//        // Save the list of favorite stories to shared preferences
-//        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = preferences.edit();
-//        Set<String> favoritesSet = new HashSet<>();
-//        for (Story story : favoriteStoriesList) {
-//            favoritesSet.add(String.valueOf(story.getId()));
-//        }
-//        editor.putStringSet(FAVORITES_SET_KEY, favoritesSet);
-//        editor.apply();
-//    }
-//
-//    private List<Story> loadFavorites() {
-//        List<Story> favorites = new ArrayList<>();
-//        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-//        Set<String> favoritesSet = preferences.getStringSet(FAVORITES_SET_KEY, new HashSet<String>());
-//        for (String id : favoritesSet) {
-//            int storyId = Integer.parseInt(id);
-//            Story story = getStoryById(storyId);
-//            if (story != null) {
-//                favorites.add(story);
-//            }
-//        }
-//        return favorites;
-//    }
-//
-//    private Story getStoryById(int id) {
-//        // Get the story with the specified id from the storyList
-//        for (Story story : storyList) {
-//            if (story.getId() == id) {
-//                return story;
-//            }
-//        }
-//        return null;
-//    }
 
 }

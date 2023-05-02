@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Empty list! click on ❤️ to add your favorites stories !!"
+        android:text="Empty list! click on ❤️ to add your favorite stories !!"
         android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerview"

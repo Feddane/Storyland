@@ -50,7 +50,7 @@ public class BaseActivity extends AppCompatActivity {
         Button removeButton = otherView1.findViewById(R.id.remove_button);
         RecyclerView recyclerView = otherView2.findViewById(R.id.recyclerview);
         ImageView sceneImage = otherView3.findViewById(R.id.sceneImg);
-        ImageView sceneText = otherView3.findViewById(R.id.sceneText);
+        TextView sceneText = otherView3.findViewById(R.id.sceneText);
         ViewPager viewPager = otherView4.findViewById(R.id.viewpager);
         TextView textview_scenes_count = otherView4.findViewById(R.id.textview_scenes_count);
         TextView textviewListen = otherView4.findViewById(R.id.textview);

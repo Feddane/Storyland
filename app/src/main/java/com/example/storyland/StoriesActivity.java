@@ -82,14 +82,34 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         storyList.add(story1);
 
         //story2
+        String[] scenes_story2 = getResources().getStringArray(R.array.scenes_story2);
         List<Scene> story2Scenes = new ArrayList<>();
         int story2AudioResourceId = R.raw.story2;
-        story2Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
-        story2Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
+        story2Scenes.add(new Scene(R.drawable.scene1story2, scenes_story2[0]));
+        story2Scenes.add(new Scene(R.drawable.scene2story2, scenes_story2[1]));
+        story2Scenes.add(new Scene(R.drawable.scene3story2, scenes_story2[2]));
+        story2Scenes.add(new Scene(R.drawable.scene4story2, scenes_story2[3]));
+        story2Scenes.add(new Scene(R.drawable.scene5story2, scenes_story2[4]));
+        story2Scenes.add(new Scene(R.drawable.scene6story2, scenes_story2[5]));
+        story2Scenes.add(new Scene(R.drawable.scene7story2, scenes_story2[6]));
+        story2Scenes.add(new Scene(R.drawable.scene8story2, scenes_story2[7]));
+        story2Scenes.add(new Scene(R.drawable.scene9story2, scenes_story2[8]));
+        story2Scenes.add(new Scene(R.drawable.scene10story2, scenes_story2[9]));
+        story2Scenes.add(new Scene(R.drawable.scene11story2, scenes_story2[10]));
+        story2Scenes.add(new Scene(R.drawable.scene12story2, scenes_story2[11]));
+        story2Scenes.add(new Scene(R.drawable.scene13story2, scenes_story2[12]));
+        story2Scenes.add(new Scene(R.drawable.scene14story2, scenes_story2[13]));
+        story2Scenes.add(new Scene(R.drawable.scene15story2, scenes_story2[14]));
+        story2Scenes.add(new Scene(R.drawable.scene16story2, scenes_story2[15]));
+        story2Scenes.add(new Scene(R.drawable.scene17story2, scenes_story2[16]));
+        story2Scenes.add(new Scene(R.drawable.scene18story2, scenes_story2[17]));
+        story2Scenes.add(new Scene(R.drawable.scene19story2, scenes_story2[18]));
+        story2Scenes.add(new Scene(R.drawable.scene20story2, scenes_story2[19]));
         Story story2 = new Story(2, R.drawable.story2, "Golidocks and the Four Bears!", "By Andrea Kaczmarek", story2Scenes, story2AudioResourceId);
         storyList.add(story2);
 
         //story3
+//        String[] scenes_story3 = getResources().getStringArray(R.array.scenes_story3);
         List<Scene> story3Scenes = new ArrayList<>();
         int story3AudioResourceId = R.raw.story2;
         story3Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));

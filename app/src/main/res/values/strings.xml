@@ -2,6 +2,7 @@
     <string name="app_name">Storyland</string>
     <string name="Subtitle">Are you ready to embark on a magical journey and discover endless stories in Storyland?</string>
 
+    <!--    Story1-->
     <string-array name="scenes_story1">
         <item>All Easter Bunnies go to the Easter Bunny School, to learn the three most important things...</item>
         <item>One, Painting Easter eggs: nice and bright.</item>
@@ -9,7 +10,7 @@
         <item>Three, and very important: reading maps.</item>
         <item>Some children live in faraway places, some in hard-to-find places...</item>
         <item>Our Easter Bunny is very new, and he must got a BIG BIG PARK... to hide eggs for the children playing in the park</item>
-        <item>"This map of this park isn\'t so easy, Water?" He asks a frog sitting by the pool of water, \"Is the BIG BIG sandpit nearby?\". Frog lauphs. "Just follow the path and ask butterflies"</item>
+        <item>"This map of this park isn\'t so easy, Water?" He asks a frog sitting by the pool, \"Is the BIG BIG sandpit nearby?\". Frog lauphs. "Just follow the path and ask butterflies"</item>
         <item>Easter Bunny hops off, following the path. "Oh! The butterflies in the flower garden!"</item>
         <item>Easter Bunny stops, and the butterflies fly around his head. "Is the BIG BIG sandpit nearby" he asks.</item>
         <item>The butterflies all laugh. "Follow the path and ask the BIG fish in the water." And they flutter back into their flowers. Easter Bunny hops off, following the path.</item>
@@ -22,5 +23,29 @@
         <item>Easter Bunny starts to hide the bright coloured Easter eggs. The park keeper looks down at the map that Easter Bunny show him.</item>
         <item>"But you are holding it upside down!" the Park keeper laughs, very loud.</item>
         <item>"Oooops!" Easter Bunny looks at the map. "I\'m a new Easter Bunny, but i\'m learning fast! i\'ll be better next Easter!</item>
+    </string-array>
+
+        <!--    story2-->
+    <string-array name="scenes_story2">
+        <item>Nobody ever talks about me. I don\'t know why, because i\'m the most important bear in the story. I am grandma Growl, and i\'m the best porridge maker in the world.</item>
+        <item>Papa Growl likes to keep us fit, and he loves long walks. Bears like to walk, we never run. I get out of those long walks by stying at home and making oh-so-special porridge. </item>
+        <item>We all love porridge. Papa Growl\'s porridge salty. Mama Growl has her porridge with crunchy brown sugar. Little Growl is just like me: he loves honey\'s porridge.</item>
+        <item>I wave my walker bears off early. So nice to have quiet time after i have stirred the porridge. I have a big yellow armchair in my kitchen, perfect to snooze.</item>
+        <item>I didn\'t hear that little Goldie girl sneak in, and i certainly didn\'t hear her eat little Gorgie\'s porridge. But i heard that CRASH-BANG! when she broke his chair. </item>
+        <item>"Well, who are you?", i looked straight at Miss Goldie, "Oh sorry, i didn\'t see you, sorry about the chair, the leg fell of". "I am Goldie Locks, we live just outside the woods..."</item>
+        <item>"No wonder the leg fell off, did you eat little Gorgie\'s porridge?", "Sorry, i was hungry, well the honey porridge is just perfect".</item>
+        <item>Upstairs, Goldie bounced around on the beds, eventough i asked her not to. "At least take off you shoes, please." I growled a kindly growl.</item>
+        <item>"I\'d better get those muddy shoes cleaned. I\'ll let little Miss Goldie have a nap". Cleaning muddy shoes is best done outside with a good hard brush.</item>
+        <item>Papa Growl noticed the porridge problem straight away. Well, Goldie had left the spoon in the browl.</item>
+        <item>Mama Growl noticed the chairs. "Who has been messing up our chairs?" And little Georgie was really miffed that his chair was broken.</item>
+        <item>Papa Growl was bounding up the stairs, four at a time. By the time  i got to the bedroom, it was all over. Before i could explain, Goldie Locks opened her eyes wide and screamed. She jumped out.</item>
+        <item>We all shouted "Don\'t jump out of that window, little girl...", "Ouch, we tried to tell you", Georgie looked up, "I SAID I'D FIX THAT CHAIR!".</item>
+        <item>We all growled again. It was meant "hope you're not hurt" growl. But maybe it sounded like a bear growl. Goldie looked up, and run as fast as she could and never came back for her nice clean shoes.</item>
+        <item>When Goldie got home, with no shoes, her mother was not pleased. Goldie tried hard to explain...</item>
+        <item>Even worse, she had to wear her big sister\'s old shoes. She tried to tell them about the bears and porridge, but they wouldn\'t listen.</item>
+        <item>Little Georgie\'s favorite goodnight storry is about the little girl who jumped of the window. Georgie\'s looks up at the bedroom shelf at the clean Goldie shoes.</item>
+        <item>Of course, by the time i get to the last bit...Little Georgie Growl is always fast asleep.</item>
+        <item>Georgie would love to see Goldie again, and wants to give her shoes back to her. "Goldie you shoes are at our house clean!".</item>
+        <item>So if YOU happen to find one of those little stickers, you aren\'t far from our house! Come and visit!.</item>
     </string-array>
 </resources>

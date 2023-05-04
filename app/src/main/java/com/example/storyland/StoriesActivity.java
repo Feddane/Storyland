@@ -109,12 +109,26 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         storyList.add(story2);
 
         //story3
-//        String[] scenes_story3 = getResources().getStringArray(R.array.scenes_story3);
+        String[] scenes_story3 = getResources().getStringArray(R.array.scenes_story3);
         List<Scene> story3Scenes = new ArrayList<>();
-        int story3AudioResourceId = R.raw.story2;
-        story3Scenes.add(new Scene(R.drawable.story2, "Once upon a time."));
-        story3Scenes.add(new Scene(R.drawable.story3, "La fin magiiiiicccccccccccc"));
-        Story story3 = new Story(2, R.drawable.story3, "The Things That Really Matter", "Refiloe Moahloli", story3Scenes, story3AudioResourceId);
+        int story3AudioResourceId = R.raw.story3;
+        story3Scenes.add(new Scene(R.drawable.scene1story3, scenes_story3[0]));
+        story3Scenes.add(new Scene(R.drawable.scene2story3, scenes_story3[1]));
+        story3Scenes.add(new Scene(R.drawable.scene3story3, scenes_story3[2]));
+        story3Scenes.add(new Scene(R.drawable.scene4story3, scenes_story3[3]));
+        story3Scenes.add(new Scene(R.drawable.scene5story3, scenes_story3[4]));
+        story3Scenes.add(new Scene(R.drawable.scene6story3, scenes_story3[5]));
+        story3Scenes.add(new Scene(R.drawable.scene7story3, scenes_story3[6]));
+        story3Scenes.add(new Scene(R.drawable.scene8story3, scenes_story3[7]));
+        story3Scenes.add(new Scene(R.drawable.scene9story3, scenes_story3[8]));
+        story3Scenes.add(new Scene(R.drawable.scene10story3, scenes_story3[9]));
+        story3Scenes.add(new Scene(R.drawable.scene11story3, scenes_story3[10]));
+        story3Scenes.add(new Scene(R.drawable.scene12story3, scenes_story3[11]));
+        story3Scenes.add(new Scene(R.drawable.scene13story3, scenes_story3[12]));
+        story3Scenes.add(new Scene(R.drawable.scene14story3, scenes_story3[13]));
+        story3Scenes.add(new Scene(R.drawable.scene15story3, scenes_story3[14]));
+        story3Scenes.add(new Scene(R.drawable.scene16story3, scenes_story3[15]));
+        Story story3 = new Story(3, R.drawable.story3, "The Things That Really Matter", "By Refiloe Moahloli", story3Scenes, story3AudioResourceId);
         storyList.add(story3);
 
     }

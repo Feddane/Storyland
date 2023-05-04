@@ -48,4 +48,25 @@
         <item>Georgie would love to see Goldie again, and wants to give her shoes back to her. "Goldie you shoes are at our house clean!".</item>
         <item>So if YOU happen to find one of those little stickers, you aren\'t far from our house! Come and visit!.</item>
     </string-array>
+
+
+    <!--    story3-->
+    <string-array name="scenes_story3">
+        <item>We arw going on a trip. I ask mama what to pack. She says, "The things that really matter".</item>
+        <item>We stop at the windmill for breakfast. the jungle gym is so much fun. </item>
+        <item>I forget my toy. I\'m sad in the car but Tando is happy. "Hooray! Now you can play with me!", he says.</item>
+        <item>We stop at a farm to see some animals. Tando is searching so hard for a springbok.</item>
+        <item>A monkey gets away with his headphones.</item>
+        <item>He is sad in the car. "Hooray! Now you can sing with me!", I say.</item>
+        <item>We stop at a roaring waterfall. We are so excited, we are pushing and pulling.</item>
+        <item>Papa falls in the water, and so does his map.</item>
+        <item>He is sad in the car, but mama is happy. "Hooray! Now i can help you find our way!", she says.</item>
+        <item>We stop at the roadside vendor to buy some mielies.</item>
+        <item>Mama bends over to pick the best ones, and her glasses fall and break.</item>
+        <item>Mama is sad in the car, but papa is happy. "Hooray! Now we can find our way together!", papa says.</item>
+        <item>We stop on an ancient hill to get a view of the valley. Papa is making silly jokes for us to smile for the picture.</item>
+        <item>but...</item>
+        <item>When we get back to the car, it won\'t start. Everyone stops laughing. "Don't worry..."says Mama. "We can still have a good time. We are the things that really matter".</item>
+        <item>And so, we do have a good time. By playing and singing and finding our way together, while enjoying the best mielies.</item>
+    </string-array>
 </resources>

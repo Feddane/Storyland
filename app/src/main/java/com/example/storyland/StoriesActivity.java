@@ -131,6 +131,27 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         Story story3 = new Story(3, R.drawable.story3, "The Things That Really Matter", "By Refiloe Moahloli", story3Scenes, story3AudioResourceId);
         storyList.add(story3);
 
+        //story3
+        String[] scenes_story4 = getResources().getStringArray(R.array.scenes_story4);
+        List<Scene> story4Scenes = new ArrayList<>();
+        int story4AudioResourceId = R.raw.story4;
+        story4Scenes.add(new Scene(R.drawable.scene1story4, scenes_story4[0]));
+        story4Scenes.add(new Scene(R.drawable.scene2story4, scenes_story4[1]));
+        story4Scenes.add(new Scene(R.drawable.scene3story4, scenes_story4[2]));
+        story4Scenes.add(new Scene(R.drawable.scene4story4, scenes_story4[3]));
+        story4Scenes.add(new Scene(R.drawable.scene5story4, scenes_story4[4]));
+        story4Scenes.add(new Scene(R.drawable.scene6story4, scenes_story4[5]));
+        story4Scenes.add(new Scene(R.drawable.scene7story4, scenes_story4[6]));
+        story4Scenes.add(new Scene(R.drawable.scene8story4, scenes_story4[7]));
+        story4Scenes.add(new Scene(R.drawable.scene9story4, scenes_story4[8]));
+        story4Scenes.add(new Scene(R.drawable.scene10story4, scenes_story4[9]));
+        story4Scenes.add(new Scene(R.drawable.scene11story4, scenes_story4[10]));
+        story4Scenes.add(new Scene(R.drawable.scene12story4, scenes_story4[11]));
+        story4Scenes.add(new Scene(R.drawable.scene13story4, scenes_story4[12]));
+        story4Scenes.add(new Scene(R.drawable.scene14story4, scenes_story4[13]));
+        Story story4 = new Story(4, R.drawable.story4, "Mama What’s For Lunch?", "By Sally Partdridge", story4Scenes, story4AudioResourceId);
+        storyList.add(story4);
+
     }
 
     public void prepareRecyclerView(){

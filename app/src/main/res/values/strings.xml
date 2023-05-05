@@ -69,4 +69,22 @@
         <item>When we get back to the car, it won\'t start. Everyone stops laughing. "Don't worry..."says Mama. "We can still have a good time. We are the things that really matter".</item>
         <item>And so, we do have a good time. By playing and singing and finding our way together, while enjoying the best mielies.</item>
     </string-array>
+
+    <!--    story4-->
+    <string-array name="scenes_story4">
+        <item>"Hurry, Thabo. Mama is making lunch". Calls Tumi.</item>
+        <item>Where are you going, Thabo?</item>
+        <item>I\'m comiiiiiing...</item>
+        <item>His friends don\'t understand why he chooses lunch over their game, but Thabo has a secret.</item>
+        <item>Mama\'s lunches are special.</item>
+        <item>On Monday, mama shapes their food like little bugs wriggle and crwal, making Tumi shriek in fright. "EEEEE!". But they are yummy fruit and vegetable, and not very scary at all.</item>
+        <item>On Tuesday, she makes a lio that roars so loudly the house shakes. "ROAR!". But, it\'s just delicious pasta and cheese.</item>
+        <item>On Wednesday, mama creates a chicken that wakes up the whole street. "CLUCK CLUCK PAKAA!". But it\'s just a plate of juicy fruit.</item>
+        <item>On Thursday, she builds a noisy truck. Thabo and Tumi cover their ears. "VROOOM!". But, it\'s just a sweet strawberry jam sandwich.</item>
+        <item>On friday, mama makes a beautiful garden filled with flowers, birds and ladybugs. "TWEET TWEET!". But, it\'s healthy pap, beans and a crunchy salad.</item>
+        <item>"Mama, what\'s for lunch?", asks Tumi. "Yes, mama", says Thabo. "What are you making today?"</item>
+        <item>Thabo and Tumi can\'t wait another second. Their tummies are grumbling. Finally, mama is ready. "What is it mama?", asks Thabo, lickingh is lips.</item>
+        <item>It\'s Thabo, Tumi and mama!. "Mmm, our favourite, your famous stew and rice.". "Thank you, mama!".</item>
+        <item>What will mama make on Sunday?</item>
+    </string-array>
 </resources>

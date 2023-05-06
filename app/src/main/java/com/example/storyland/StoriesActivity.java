@@ -131,7 +131,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         Story story3 = new Story(3, R.drawable.story3, "The Things That Really Matter", "By Refiloe Moahloli", story3Scenes, story3AudioResourceId);
         storyList.add(story3);
 
-        //story3
+        //story4
         String[] scenes_story4 = getResources().getStringArray(R.array.scenes_story4);
         List<Scene> story4Scenes = new ArrayList<>();
         int story4AudioResourceId = R.raw.story4;
@@ -151,6 +151,27 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         story4Scenes.add(new Scene(R.drawable.scene14story4, scenes_story4[13]));
         Story story4 = new Story(4, R.drawable.story4, "Mama What’s For Lunch?", "By Sally Partdridge", story4Scenes, story4AudioResourceId);
         storyList.add(story4);
+
+        //story5
+        String[] scenes_story5 = getResources().getStringArray(R.array.scenes_story5);
+        List<Scene> story5cenes = new ArrayList<>();
+        int story5AudioResourceId = R.raw.story5;
+        story5cenes.add(new Scene(R.drawable.scene1story5, scenes_story5[0]));
+        story5cenes.add(new Scene(R.drawable.scene2story5, scenes_story5[1]));
+        story5cenes.add(new Scene(R.drawable.scene3story5, scenes_story5[2]));
+        story5cenes.add(new Scene(R.drawable.scene4story5, scenes_story5[3]));
+        story5cenes.add(new Scene(R.drawable.scene5story5, scenes_story5[4]));
+        story5cenes.add(new Scene(R.drawable.scene6story5, scenes_story5[5]));
+        story5cenes.add(new Scene(R.drawable.scene7story5, scenes_story5[6]));
+        story5cenes.add(new Scene(R.drawable.scene8story5, scenes_story5[7]));
+        story5cenes.add(new Scene(R.drawable.scene9story5, scenes_story5[8]));
+        story5cenes.add(new Scene(R.drawable.scene10story5, scenes_story5[9]));
+        story5cenes.add(new Scene(R.drawable.scene11story5, scenes_story5[10]));
+        story5cenes.add(new Scene(R.drawable.scene12story5, scenes_story5[11]));
+        story5cenes.add(new Scene(R.drawable.scene13story5, scenes_story5[12]));
+        story5cenes.add(new Scene(R.drawable.scene14story5, scenes_story5[13]));
+        Story story5 = new Story(5, R.drawable.story5, "Frog’s Starry Wish", "By Sheesh Pal", story5cenes, story5AudioResourceId);
+        storyList.add(story5);
 
     }
 

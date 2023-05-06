@@ -87,4 +87,23 @@
         <item>It\'s Thabo, Tumi and mama!. "Mmm, our favourite, your famous stew and rice.". "Thank you, mama!".</item>
         <item>What will mama make on Sunday?</item>
     </string-array>
+
+
+    <!--    story5-->
+    <string-array name="scenes_story5">
+        <item>Frog loved looking at the stars. He wanted to jump up and touch them.</item>
+        <item>He climbed a big rock, and reached out for them. But they were out of his reach. The stars were SO far away!</item>
+        <item>Then, he saw a hillock. Up he climbed. He stretched his hands, but the stars were still out of reach.</item>
+        <item>Frog saw a coconut tree nearby. It was very tall. "Ah", he tought. "This will work now".</item>
+        <item>He started to climb the tree. He climbed with great difficulty.</item>
+        <item>He stretched his hands... but the stars were still out of his reach.</item>
+        <item>He was disappointed. He looked down. His heart skipped a beat in fear.</item>
+        <item>He put a hand to his heart and told himself, "I won\'t be scared. I can do it!"</item>
+        <item>Then he saw a pond. The stars were twinkling in the water.</item>
+        <item>He gazed at the stars and was joyous. He dived into the pond.</item>
+        <item>The closer he got the pond, the closer he seemed to the stars.</item>
+        <item>SPLASH!. He hit the surface of the water.</item>
+        <item>He climbed out and sat on the blank.</item>
+        <item>He sat and watched the stars twinkling in the pond.</item>
+    </string-array>
 </resources>

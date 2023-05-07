@@ -106,4 +106,20 @@
         <item>He climbed out and sat on the blank.</item>
         <item>He sat and watched the stars twinkling in the pond.</item>
     </string-array>
+
+
+    <!--    story6-->
+    <string-array name="scenes_story6">
+        <item>My mom loves me. She works hard all the time. And i learn so much from her!</item>
+        <item>When my mom cooks, i learn to cook too.</item>
+        <item>When she waters the flowers, i learn to water the flowers too.</item>
+        <item>When she washes our clothes, i learn to wash our clothes too.</item>
+        <item>When she dries our clothes, i learn to dry our clothes too.</item>
+        <item>My mom also bought me a bicycle and she taught me how to ride it.</item>
+        <item>As i ride my bicycle, my mom smiles when i go "WHEEEEEEEEE!".</item>
+        <item>At night, my mom make the bed. I learn how to make the bed too</item>
+        <item>Before bedtime, my mom tells me stories.</item>
+        <item>When i\'m sleepy, my mom sings me lullaby.</item>
+        <item>I love my mom so much!</item>
+    </string-array>
 </resources>

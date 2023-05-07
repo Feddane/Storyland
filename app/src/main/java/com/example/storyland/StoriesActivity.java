@@ -173,6 +173,24 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         Story story5 = new Story(5, R.drawable.story5, "Frog’s Starry Wish", "By Sheesh Pal", story5cenes, story5AudioResourceId);
         storyList.add(story5);
 
+
+        //story5
+        String[] scenes_story6 = getResources().getStringArray(R.array.scenes_story6);
+        List<Scene> story6cenes = new ArrayList<>();
+        int story6AudioResourceId = R.raw.story6;
+        story6cenes.add(new Scene(R.drawable.scene1story6, scenes_story6[0]));
+        story6cenes.add(new Scene(R.drawable.scene2story6, scenes_story6[1]));
+        story6cenes.add(new Scene(R.drawable.scene3story6, scenes_story6[2]));
+        story6cenes.add(new Scene(R.drawable.scene4story6, scenes_story6[3]));
+        story6cenes.add(new Scene(R.drawable.scene5story6, scenes_story6[4]));
+        story6cenes.add(new Scene(R.drawable.scene6story6, scenes_story6[5]));
+        story6cenes.add(new Scene(R.drawable.scene7story6, scenes_story6[6]));
+        story6cenes.add(new Scene(R.drawable.scene8story6, scenes_story6[7]));
+        story6cenes.add(new Scene(R.drawable.scene9story6, scenes_story6[8]));
+        story6cenes.add(new Scene(R.drawable.scene10story6, scenes_story6[9]));
+        story6cenes.add(new Scene(R.drawable.scene11story6, scenes_story6[10]));
+        Story story6 = new Story(6, R.drawable.story6, "I Love My Mom", "By Stephony Wail", story6cenes, story6AudioResourceId);
+        storyList.add(story6);
     }
 
     public void prepareRecyclerView(){

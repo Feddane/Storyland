@@ -125,25 +125,25 @@
 
     <!--    story7-->
     <string-array name="scenes_story7">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Whooosh! i heard wind gusting in the dark night.</item>
+        <item>Swish! i see branches swirl in golden light.</item>
+        <item>Crunch! i touch crispy brown leaves under my feet.</item>
+        <item>Mmm! i taste oranges and cinnamon so sweet.</item>
+        <item>Rumble! i glimpse a tractor rolling in the field.</item>
+        <item>Chomp! i bite yellow corn from the harvest yield.</item>
+        <item>Chug! i watch a choo-choo train rumble down the track.</item>
+        <item>Caw! i discover the crow with his feathers black.</item>
+        <item>Plop! i feel fat cool raindrops fall from the sky.</item>
+        <item>Plunk! i fill my basket with red apples high.</item>
+        <item>Whee! i dance and jump and land a thud.</item>
+        <item>Squelch! i stick my toes in the cold wet mud.</item>
+        <item>Whoo! i spot a small tawny owl in the trees.</item>
+        <item>Boom! i listen to thunder brust through the breeze.</item>
+        <item>Pop! i mind fireplace logs crackling in the house.</item>
+        <item>Eek! i spy a little brown furry dormouse.</item>
+        <item>Whiff! i smell fresh pumpkin pies baking in the oven.</item>
+        <item>Sizzle! i find giant turkeys roasting by the dozen.</item>
+        <item>Ahh! i sip hot cocoa and curl up with a book before bed.</item>
+        <item>Sigh! i know Autmun is full of stories waiting to be read.</item>
     </string-array>
 </resources>

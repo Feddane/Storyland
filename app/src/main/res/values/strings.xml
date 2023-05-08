@@ -122,4 +122,28 @@
         <item>When i\'m sleepy, my mom sings me lullaby.</item>
         <item>I love my mom so much!</item>
     </string-array>
+
+    <!--    story7-->
+    <string-array name="scenes_story7">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>

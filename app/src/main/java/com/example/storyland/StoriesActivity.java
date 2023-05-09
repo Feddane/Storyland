@@ -154,71 +154,74 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
 
         //story5
         String[] scenes_story5 = getResources().getStringArray(R.array.scenes_story5);
-        List<Scene> story5cenes = new ArrayList<>();
+        List<Scene> story5Scenes = new ArrayList<>();
         int story5AudioResourceId = R.raw.story5;
-        story5cenes.add(new Scene(R.drawable.scene1story5, scenes_story5[0]));
-        story5cenes.add(new Scene(R.drawable.scene2story5, scenes_story5[1]));
-        story5cenes.add(new Scene(R.drawable.scene3story5, scenes_story5[2]));
-        story5cenes.add(new Scene(R.drawable.scene4story5, scenes_story5[3]));
-        story5cenes.add(new Scene(R.drawable.scene5story5, scenes_story5[4]));
-        story5cenes.add(new Scene(R.drawable.scene6story5, scenes_story5[5]));
-        story5cenes.add(new Scene(R.drawable.scene7story5, scenes_story5[6]));
-        story5cenes.add(new Scene(R.drawable.scene8story5, scenes_story5[7]));
-        story5cenes.add(new Scene(R.drawable.scene9story5, scenes_story5[8]));
-        story5cenes.add(new Scene(R.drawable.scene10story5, scenes_story5[9]));
-        story5cenes.add(new Scene(R.drawable.scene11story5, scenes_story5[10]));
-        story5cenes.add(new Scene(R.drawable.scene12story5, scenes_story5[11]));
-        story5cenes.add(new Scene(R.drawable.scene13story5, scenes_story5[12]));
-        story5cenes.add(new Scene(R.drawable.scene14story5, scenes_story5[13]));
-        Story story5 = new Story(5, R.drawable.story5, "Frog’s Starry Wish", "By Sheesh Pal", story5cenes, story5AudioResourceId);
+        story5Scenes.add(new Scene(R.drawable.scene1story5, scenes_story5[0]));
+        story5Scenes.add(new Scene(R.drawable.scene2story5, scenes_story5[1]));
+        story5Scenes.add(new Scene(R.drawable.scene3story5, scenes_story5[2]));
+        story5Scenes.add(new Scene(R.drawable.scene4story5, scenes_story5[3]));
+        story5Scenes.add(new Scene(R.drawable.scene5story5, scenes_story5[4]));
+        story5Scenes.add(new Scene(R.drawable.scene6story5, scenes_story5[5]));
+        story5Scenes.add(new Scene(R.drawable.scene7story5, scenes_story5[6]));
+        story5Scenes.add(new Scene(R.drawable.scene8story5, scenes_story5[7]));
+        story5Scenes.add(new Scene(R.drawable.scene9story5, scenes_story5[8]));
+        story5Scenes.add(new Scene(R.drawable.scene10story5, scenes_story5[9]));
+        story5Scenes.add(new Scene(R.drawable.scene11story5, scenes_story5[10]));
+        story5Scenes.add(new Scene(R.drawable.scene12story5, scenes_story5[11]));
+        story5Scenes.add(new Scene(R.drawable.scene13story5, scenes_story5[12]));
+        story5Scenes.add(new Scene(R.drawable.scene14story5, scenes_story5[13]));
+        Story story5 = new Story(5, R.drawable.story5, "Frog’s Starry Wish", "By Sheesh Pal", story5Scenes, story5AudioResourceId);
         storyList.add(story5);
 
 
         //story6
         String[] scenes_story6 = getResources().getStringArray(R.array.scenes_story6);
-        List<Scene> story6cenes = new ArrayList<>();
+        List<Scene> story6Scenes = new ArrayList<>();
         int story6AudioResourceId = R.raw.story6;
-        story6cenes.add(new Scene(R.drawable.scene1story6, scenes_story6[0]));
-        story6cenes.add(new Scene(R.drawable.scene2story6, scenes_story6[1]));
-        story6cenes.add(new Scene(R.drawable.scene3story6, scenes_story6[2]));
-        story6cenes.add(new Scene(R.drawable.scene4story6, scenes_story6[3]));
-        story6cenes.add(new Scene(R.drawable.scene5story6, scenes_story6[4]));
-        story6cenes.add(new Scene(R.drawable.scene6story6, scenes_story6[5]));
-        story6cenes.add(new Scene(R.drawable.scene7story6, scenes_story6[6]));
-        story6cenes.add(new Scene(R.drawable.scene8story6, scenes_story6[7]));
-        story6cenes.add(new Scene(R.drawable.scene9story6, scenes_story6[8]));
-        story6cenes.add(new Scene(R.drawable.scene10story6, scenes_story6[9]));
-        story6cenes.add(new Scene(R.drawable.scene11story6, scenes_story6[10]));
-        Story story6 = new Story(6, R.drawable.story6, "I Love My Mom", "By Stephony Wail", story6cenes, story6AudioResourceId);
+        story6Scenes.add(new Scene(R.drawable.scene1story6, scenes_story6[0]));
+        story6Scenes.add(new Scene(R.drawable.scene2story6, scenes_story6[1]));
+        story6Scenes.add(new Scene(R.drawable.scene3story6, scenes_story6[2]));
+        story6Scenes.add(new Scene(R.drawable.scene4story6, scenes_story6[3]));
+        story6Scenes.add(new Scene(R.drawable.scene5story6, scenes_story6[4]));
+        story6Scenes.add(new Scene(R.drawable.scene6story6, scenes_story6[5]));
+        story6Scenes.add(new Scene(R.drawable.scene7story6, scenes_story6[6]));
+        story6Scenes.add(new Scene(R.drawable.scene8story6, scenes_story6[7]));
+        story6Scenes.add(new Scene(R.drawable.scene9story6, scenes_story6[8]));
+        story6Scenes.add(new Scene(R.drawable.scene10story6, scenes_story6[9]));
+        story6Scenes.add(new Scene(R.drawable.scene11story6, scenes_story6[10]));
+        Story story6 = new Story(6, R.drawable.story6, "I Love My Mom", "By Stephony Wail", story6Scenes, story6AudioResourceId);
         storyList.add(story6);
 
 
-        //story6
+        //story7
         String[] scenes_story7 = getResources().getStringArray(R.array.scenes_story7);
-        List<Scene> story7cenes = new ArrayList<>();
+        List<Scene> story7Scenes = new ArrayList<>();
         int story7AudioResourceId = R.raw.story7;
-        story7cenes.add(new Scene(R.drawable.scene1story7, scenes_story7[0]));
-        story7cenes.add(new Scene(R.drawable.scene2story7, scenes_story7[1]));
-        story7cenes.add(new Scene(R.drawable.scene3story7, scenes_story7[2]));
-        story7cenes.add(new Scene(R.drawable.scene4story7, scenes_story7[3]));
-        story7cenes.add(new Scene(R.drawable.scene5story7, scenes_story7[4]));
-        story7cenes.add(new Scene(R.drawable.scene6story7, scenes_story7[5]));
-        story7cenes.add(new Scene(R.drawable.scene7story7, scenes_story7[6]));
-        story7cenes.add(new Scene(R.drawable.scene8story7, scenes_story7[7]));
-        story7cenes.add(new Scene(R.drawable.scene9story7, scenes_story7[8]));
-        story7cenes.add(new Scene(R.drawable.scene10story7, scenes_story7[9]));
-        story7cenes.add(new Scene(R.drawable.scene11story7, scenes_story7[10]));
-        story7cenes.add(new Scene(R.drawable.scene12story7, scenes_story7[11]));
-        story7cenes.add(new Scene(R.drawable.scene13story7, scenes_story7[12]));
-        story7cenes.add(new Scene(R.drawable.scene14story7, scenes_story7[13]));
-        story7cenes.add(new Scene(R.drawable.scene15story7, scenes_story7[14]));
-        story7cenes.add(new Scene(R.drawable.scene16story7, scenes_story7[15]));
-        story7cenes.add(new Scene(R.drawable.scene17story7, scenes_story7[16]));
-        story7cenes.add(new Scene(R.drawable.scene18story7, scenes_story7[17]));
-        story7cenes.add(new Scene(R.drawable.scene19story7, scenes_story7[18]));
-        story7cenes.add(new Scene(R.drawable.scene20story7, scenes_story7[19]));
-        Story story7 = new Story(7, R.drawable.story7, " My autumn senses", "By Stacie Eirich", story7cenes, story7AudioResourceId);
+        story7Scenes.add(new Scene(R.drawable.scene1story7, scenes_story7[0]));
+        story7Scenes.add(new Scene(R.drawable.scene2story7, scenes_story7[1]));
+        story7Scenes.add(new Scene(R.drawable.scene3story7, scenes_story7[2]));
+        story7Scenes.add(new Scene(R.drawable.scene4story7, scenes_story7[3]));
+        story7Scenes.add(new Scene(R.drawable.scene5story7, scenes_story7[4]));
+        story7Scenes.add(new Scene(R.drawable.scene6story7, scenes_story7[5]));
+        story7Scenes.add(new Scene(R.drawable.scene7story7, scenes_story7[6]));
+        story7Scenes.add(new Scene(R.drawable.scene8story7, scenes_story7[7]));
+        story7Scenes.add(new Scene(R.drawable.scene9story7, scenes_story7[8]));
+        story7Scenes.add(new Scene(R.drawable.scene10story7, scenes_story7[9]));
+        story7Scenes.add(new Scene(R.drawable.scene11story7, scenes_story7[10]));
+        story7Scenes.add(new Scene(R.drawable.scene12story7, scenes_story7[11]));
+        story7Scenes.add(new Scene(R.drawable.scene13story7, scenes_story7[12]));
+        story7Scenes.add(new Scene(R.drawable.scene14story7, scenes_story7[13]));
+        story7Scenes.add(new Scene(R.drawable.scene15story7, scenes_story7[14]));
+        story7Scenes.add(new Scene(R.drawable.scene16story7, scenes_story7[15]));
+        story7Scenes.add(new Scene(R.drawable.scene17story7, scenes_story7[16]));
+        story7Scenes.add(new Scene(R.drawable.scene18story7, scenes_story7[17]));
+        story7Scenes.add(new Scene(R.drawable.scene19story7, scenes_story7[18]));
+        story7Scenes.add(new Scene(R.drawable.scene20story7, scenes_story7[19]));
+        Story story7 = new Story(7, R.drawable.story7, " My autumn senses", "By Stacie Eirich", story7Scenes, story7AudioResourceId);
         storyList.add(story7);
+
+
+
     }
 
     public void prepareRecyclerView(){

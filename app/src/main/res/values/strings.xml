@@ -146,4 +146,31 @@
         <item>Ahh! i sip hot cocoa and curl up with a book before bed.</item>
         <item>Sigh! i know Autmun is full of stories waiting to be read.</item>
     </string-array>
+
+    <!--    story8-->
+    <string-array name="scenes_story8">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>

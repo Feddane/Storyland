@@ -220,7 +220,33 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         Story story7 = new Story(7, R.drawable.story7, " My autumn senses", "By Stacie Eirich", story7Scenes, story7AudioResourceId);
         storyList.add(story7);
 
+        //story8
+        String[] scenes_story8 = getResources().getStringArray(R.array.scenes_story8);
+        List<Scene> story8Scenes = new ArrayList<>();
+        int story8AudioResourceId = R.raw.story8;
+        story8Scenes.add(new Scene(R.drawable.scene1story8, scenes_story8[0]));
+        story8Scenes.add(new Scene(R.drawable.scene2story8, scenes_story8[1]));
+        story8Scenes.add(new Scene(R.drawable.scene3story8, scenes_story8[2]));
+        story8Scenes.add(new Scene(R.drawable.scene4story8, scenes_story8[3]));
+        story8Scenes.add(new Scene(R.drawable.scene5story8, scenes_story8[4]));
+        story8Scenes.add(new Scene(R.drawable.scene6story8, scenes_story8[5]));
+        story8Scenes.add(new Scene(R.drawable.scene7story8, scenes_story8[6]));
+        story8Scenes.add(new Scene(R.drawable.scene8story8, scenes_story8[7]));
+        story8Scenes.add(new Scene(R.drawable.scene9story8, scenes_story8[8]));
+        story8Scenes.add(new Scene(R.drawable.scene10story8, scenes_story8[9]));
+        story8Scenes.add(new Scene(R.drawable.scene11story8, scenes_story8[10]));
+        story8Scenes.add(new Scene(R.drawable.scene12story8, scenes_story8[11]));
+        story8Scenes.add(new Scene(R.drawable.scene13story8, scenes_story8[12]));
+        story8Scenes.add(new Scene(R.drawable.scene14story8, scenes_story8[13]));
+        story8Scenes.add(new Scene(R.drawable.scene15story8, scenes_story8[14]));
+        story8Scenes.add(new Scene(R.drawable.scene16story8, scenes_story8[15]));
+        story8Scenes.add(new Scene(R.drawable.scene17story8, scenes_story8[16]));
+        story8Scenes.add(new Scene(R.drawable.scene18story8, scenes_story8[17]));
+        story8Scenes.add(new Scene(R.drawable.scene19story8, scenes_story8[18]));
+        story8Scenes.add(new Scene(R.drawable.scene20story8, scenes_story8[19]));
 
+        Story story8 = new Story(8, R.drawable.story8, " Don’t Wake The Baby!", "By Huhynh Thi", story8Scenes, story8AudioResourceId);
+        storyList.add(story8);
 
     }
 

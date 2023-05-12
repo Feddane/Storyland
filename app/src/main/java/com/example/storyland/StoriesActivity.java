@@ -52,7 +52,7 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         return super.onOptionsItemSelected(item);
     }
 
-    //On ajoute les histoires a la liste d'histoires  "List<Story> storyList"
+    //On ajoute les histoires a la liste d'histoires  "List<Story> storyList, accompagnes des scenes + audio"
     public void setData(){
 
         //story1

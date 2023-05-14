@@ -161,9 +161,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
 
-
-
-
         } else {
             // Définir Margins pour les petits appareils
             ViewGroup.MarginLayoutParams params1 = (ViewGroup.MarginLayoutParams) textView1.getLayoutParams();

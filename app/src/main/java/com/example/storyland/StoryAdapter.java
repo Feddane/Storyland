@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -98,7 +97,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             @Override
             public void onClick(View v) {
                 // Supprimer l'histoire des favoris
-                FavoriteStoriesActivity.removeFromFavorites(story);
+                FavoriteStoriesActivity.removeFromFavorites(context, story);
 
                 // Mettre à jour le drapeau isFavorite pour l'histoire
                 story.setFavorite(false);

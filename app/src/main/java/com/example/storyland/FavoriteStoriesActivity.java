@@ -1,11 +1,9 @@
 package com.example.storyland;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.view.View;
@@ -15,9 +13,7 @@ import android.widget.Toast;
 
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 
 public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapter.StoryClickListener {
@@ -25,8 +21,6 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
     RecyclerView recyclerView;
     static StoryAdapter storyAdapter;
     static List<Story> favoriteStoriesList = new ArrayList<>();
-    private static final String PREFS_NAME = "MyPrefsFile";
-    private static final String FAVORITES_SET_KEY = "favorite_stories_set";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,22 +68,13 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
     }
 
     //Supprimer l'histoire des favoris
-    public static void removeFromFavorites( Story story) {
+    public static void removeFromFavorites( Context context, Story story) {
         story.setFavorite(false);
         favoriteStoriesList.remove(story);
         if (storyAdapter != null) {
             storyAdapter.notifyDataSetChanged();
         }
 
-    }
-
-    //Vérifier si une histoire est enregistrée dans les favoris de l'utilisateur.
-    public static boolean isFavorite(Context context, Story story) {
-        SharedPreferences preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        Set<String> favoritesSet = preferences.getStringSet(FAVORITES_SET_KEY, new HashSet<String>());
-
-        String storyId = String.valueOf(story.getId());
-        return favoritesSet.contains(storyId);
     }
 
 

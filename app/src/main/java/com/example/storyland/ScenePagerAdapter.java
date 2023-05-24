@@ -15,7 +15,7 @@ import androidx.viewpager.widget.PagerAdapter;
 public class ScenePagerAdapter extends PagerAdapter {
     private List<Scene> sceneList;
     private LayoutInflater layoutInflater;
-    private Context context;
+    private final Context context;
 
     public ScenePagerAdapter(List<Scene> sceneList, Context context) {
         this.sceneList = sceneList;

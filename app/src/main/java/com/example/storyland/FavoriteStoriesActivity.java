@@ -76,8 +76,6 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
             storyAdapter.notifyDataSetChanged();
         }
 
-        //Afficher le message "Your favorite stories list is empty" si la liste est vide
-
         if (favoriteStoriesList.isEmpty()) {
             emptyFavoritesText.setVisibility(View.VISIBLE);
         } else {

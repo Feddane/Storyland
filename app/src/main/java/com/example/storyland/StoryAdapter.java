@@ -114,7 +114,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
         // Cacher les boutons si Adapter est utilisé dans la FavoriteStoriesActivity = Supprimer les boutons dans FavoriteStoriesActivity
         if (context instanceof FavoriteStoriesActivity) {
             holder.addButton.setVisibility(View.GONE);
-            holder.removeButton.setVisibility(View.GONE);
+            holder.removeButton.setVisibility(View.VISIBLE);
         }
 
     }

@@ -21,6 +21,7 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
     RecyclerView recyclerView;
     static StoryAdapter storyAdapter;
     static List<Story> favoriteStoriesList = new ArrayList<>();
+    static TextView emptyFavoritesText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,8 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
         recyclerView = findViewById(R.id.recyclerview);
         prepareRecyclerView();
 
-        //Afficher le message "Your favorite stories list is empty" si la liste est vide
-        TextView emptyFavoritesText = findViewById(R.id.emptyFavoritesText);
+        //Display the message "Your favorite stories list is empty" if the list is empty
+        emptyFavoritesText = findViewById(R.id.emptyFavoritesText);
         if (favoriteStoriesList.isEmpty()) {
             emptyFavoritesText.setVisibility(View.VISIBLE);
         } else {
@@ -73,6 +74,14 @@ public class FavoriteStoriesActivity extends BaseActivity implements StoryAdapte
         favoriteStoriesList.remove(story);
         if (storyAdapter != null) {
             storyAdapter.notifyDataSetChanged();
+        }
+
+        //Afficher le message "Your favorite stories list is empty" si la liste est vide
+
+        if (favoriteStoriesList.isEmpty()) {
+            emptyFavoritesText.setVisibility(View.VISIBLE);
+        } else {
+            emptyFavoritesText.setVisibility(View.GONE);
         }
 
     }

@@ -6,33 +6,71 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
+public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> implements Filterable {
 
     public List<Story> storyList = new ArrayList<>();
+    public List<Story> getStoryListFilter = new ArrayList<>();
     public Context context;
     public StoryClickListener storyClickListener;
 
-    //Quand l'utilisateur selectionne ou clique sur une histoire
-    public interface  StoryClickListener{
-        void selectedStory(Story story);
-    }
 
     public StoryAdapter(List<Story> story, Context context, StoryClickListener storyClickListener){
         this.storyList = story;
         this.context = context;
         this.storyClickListener = storyClickListener;
+        this.getStoryListFilter = storyList;
+    }
+
+    @Override
+    public Filter getFilter() {
+        Filter filter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults filterResults = new FilterResults();
+                if (constraint == null || constraint.length() == 0){
+                    filterResults.values = getStoryListFilter;
+                    filterResults.count = getStoryListFilter.size();
+                }else{
+                    String searchStr = constraint.toString().toLowerCase();
+                    List<Story> stories = new ArrayList<>();
+                    for(Story story : getStoryListFilter){
+                        if(story.getTitle().toLowerCase().contains(searchStr) || story.getAuthor().toLowerCase().contains(searchStr)){
+                            stories.add(story);
+                        }
+                    }
+                    filterResults.values = stories;
+                    filterResults.count = stories.size();
+                }
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                storyList = (List<Story>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+        return filter;
+    }
+
+    //Quand l'utilisateur selectionne ou clique sur une histoire
+    public interface  StoryClickListener{
+        void selectedStory(Story story);
     }
 
     @NonNull

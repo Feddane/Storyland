@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.appcompat.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,21 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.searchView);
+        androidx.appcompat.widget.SearchView searchView = (androidx.appcompat.widget.SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                String searchStr = newText;
+                storyAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
         return true;
     }
 
@@ -45,6 +61,8 @@ public class StoriesActivity extends BaseActivity implements StoryAdapter.StoryC
         if (id == R.id.action_favourites) {
             Intent intent = new Intent(this, FavoriteStoriesActivity.class);
             startActivity(intent);
+            return true;
+        }else if(id == R.id.searchView){
             return true;
         }
 

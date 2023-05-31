@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -60,6 +62,9 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
                 storyClickListener.selectedStory(story);
             }
         });
+
+        //Ajouter animation
+        holder.cardView.startAnimation(AnimationUtils.loadAnimation(context,R.anim.recyclerview_animation));
 
         // Vérifie si l'histoire est déjà dans les favoris
         boolean isFavorite = story.isFavorite();
@@ -132,6 +137,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
         private TextView author;
         private Button addButton;
         private Button removeButton;
+        CardView cardView;
 
         public StoryViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -140,6 +146,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             author = itemView.findViewById(R.id.author);
             addButton = itemView.findViewById(R.id.add_buttton);
             removeButton = itemView.findViewById(R.id.remove_button);
+            cardView = itemView.findViewById(R.id.cardview);
         }
     }
 }

@@ -52,12 +52,12 @@
             <Button
                 android:id="@+id/add_buttton"
                 android:layout_width="40dp"
-                android:layout_height="33dp"
+                android:layout_height="40dp"
                 android:layout_gravity="bottom|end"
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/ic_baseline_favorite_border_24"
-                android:theme="@style/MyButtonTheme" />
+                />
 
             <Button
                 android:id="@+id/remove_button"
@@ -67,8 +67,19 @@
                 android:layout_marginBottom="18dp"
                 android:layout_marginEnd="18dp"
                 android:visibility="gone"
-                android:background="@drawable/ic_action_fav"
-                android:theme="@style/MyButtonTheme" />
+                android:background="@drawable/ic_baseline_favorite_24"
+                />
+
+            <Button
+                android:id="@+id/deleteFav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="18dp"
+                android:layout_marginEnd="18dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_baseline_delete_24"
+                />
 
         </LinearLayout>
 

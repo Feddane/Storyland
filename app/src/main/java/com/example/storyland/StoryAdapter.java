@@ -135,7 +135,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             }
         });
 
-        // Définir OnClickListener pour le bouton "Supprimer des favoris"
+        // Définir OnClickListener pour le bouton "Supprimer des favoris" dans menu
         holder.removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,10 +154,23 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             }
         });
 
+        //supprimer une histoire des favoris dans la liste des favoris
+        holder.deleteFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Supprimer l'histoire des favoris
+                FavoriteStoriesActivity.removeFromFavorites(context, story);
+
+                // Mettre à jour le drapeau isFavorite pour l'histoire
+                story.setFavorite(false);
+            }
+        });
+
         // Cacher le bouton d'ajout a la liste  si Adapter est utilisé dans la FavoriteStoriesActivity
         if (context instanceof FavoriteStoriesActivity) {
             holder.addButton.setVisibility(View.GONE);
-            holder.removeButton.setVisibility(View.VISIBLE);
+            holder.removeButton.setVisibility(View.GONE);
+            holder.deleteFav.setVisibility(View.VISIBLE);
         }
 
     }
@@ -175,6 +188,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
         private TextView author;
         private Button addButton;
         private Button removeButton;
+        private Button deleteFav;
         CardView cardView;
 
         public StoryViewHolder(@NonNull View itemView) {
@@ -184,6 +198,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
             author = itemView.findViewById(R.id.author);
             addButton = itemView.findViewById(R.id.add_buttton);
             removeButton = itemView.findViewById(R.id.remove_button);
+            deleteFav = itemView.findViewById(R.id.deleteFav);
             cardView = itemView.findViewById(R.id.cardview);
         }
     }

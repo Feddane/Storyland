@@ -33,7 +33,9 @@ Storyland includes a powerful search feature that allows users to find stories b
 To install StoryLand on your Android device, click [Here](https://www.mediafire.com/file/w9k6eoua74tfmk2/Storyland.apk/file)
 
     
+## Screenshots
 
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 

@@ -4,7 +4,12 @@ Storyland is an interactive mobile application designed to provide a delightful 
 
 
 
+![Logo]()
 
+
+## Screenshots
+
+![App Screenshot](https://github.com/Feddane/Storyland/blob/master/Screenshots/Google%20Pixel%204%20XL%20Presentation.png?raw=true)
 
 
 ## Features
@@ -27,20 +32,12 @@ Storyland is an interactive mobile application designed to provide a delightful 
 6. **Search Functionality**
 
 
-
 ## Installation
 
 To install StoryLand on your Android device, click [Here](https://www.mediafire.com/file/w9k6eoua74tfmk2/Storyland.apk/file)
 
     
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-
 ## Feedback
 
 If you have any feedback, please reach out to me at https://www.linkedin.com/in/cha%C3%AFma-feddane-27a003224/
-
 

@@ -39,5 +39,5 @@ To install StoryLand on your Android device, click [Here](https://www.mediafire.
     
 ## Feedback
 
-If you have any feedback, please reach out to me at https://www.linkedin.com/in/cha%C3%AFma-feddane-27a003224/
+If you have any feedback, please reach me out on my [LinkedIn](https://www.linkedin.com/in/cha%C3%AFma-feddane-27a003224/) account.
 

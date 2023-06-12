@@ -31,7 +31,7 @@ Storyland is an interactive mobile application designed to provide a delightful 
 
 6. **Search Functionality**
 
-## Development
+
 
 
 ## Installation

@@ -1,6 +1,6 @@
 
 # Storyland android app
-Storyland is an interactive mobile application designed to provide a delightful and educational storytelling experience for children of all ages. It aims to inspire young minds and foster a love for reading and storytelling.
+Storyland is an interactive mobile application designed to provide a delightful and educational storytelling experience for children of all ages. It aims to 
 
 
 

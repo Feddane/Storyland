@@ -4,9 +4,6 @@ Storyland is an interactive mobile application designed to provide a delightful 
 
 
 
-
-
-
 ## Screenshots
 
 ![App Screenshot](https://github.com/Feddane/Storyland/blob/master/Screenshots/Google%20Pixel%204%20XL%20Presentation.png?raw=true)
